@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0B0B0F;
+  --color-card: #12121A;
+  --color-primary: #7F5AF0;
+  --color-secondary: #00C2FF;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: none !important;
+}
+
+body {
+  background-color: #0B0B0F;
+  color: #F5F5F5;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Hide default cursor on desktop only */
+@media (pointer: fine) {
+  * { cursor: none !important; }
+}
+
+/* Restore cursor on touch/mobile */
+@media (pointer: coarse) {
+  html { cursor: auto; }
+  * { cursor: auto !important; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #0B0B0F; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7F5AF0, #00C2FF);
+  border-radius: 2px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(127, 90, 240, 0.3);
+  color: #F5F5F5;
+}
+
+/* Hero dot grid */
+.hero-grid {
+  background-image: radial-gradient(rgba(127, 90, 240, 0.14) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #7F5AF0, #00C2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass card */
+.glass {
+  background: rgba(18, 18, 26, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+}
+
+/* Hero glow */
+.hero-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, 30px) scale(1.1); }
+}
+
+/* Section base */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 24px;
+}
+
+/* Skill pill */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: rgba(127, 90, 240, 0.1);
+  color: #c4b5fd;
+  border: 1px solid rgba(127, 90, 240, 0.22);
+  transition: all 0.2s ease;
+}
+.skill-pill:hover {
+  background: rgba(127, 90, 240, 0.2);
+  transform: scale(1.05);
+}
+
+/* Timeline line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(127,90,240,0.5) 20%, rgba(0,194,255,0.5) 80%, transparent);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+}
+
+/* Input focus glow */
+.input-field {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #F5F5F5;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  outline: none;
+}
+.input-field::placeholder { color: rgba(255,255,255,0.3); }
+.input-field:focus {
+  border-color: #7F5AF0;
+  box-shadow: 0 0 0 3px rgba(127, 90, 240, 0.15);
+}
+
+/* Animate float */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: float 5s ease-in-out infinite; }
+
+/* Scroll indicator bounce */
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+.animate-bounce-subtle { animation: bounce-subtle 1.8s ease-in-out infinite; }
+
+/* Pulse dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.8); }
+}
+.animate-pulse-dot { animation: pulse-dot 1.8s ease-in-out infinite; }
