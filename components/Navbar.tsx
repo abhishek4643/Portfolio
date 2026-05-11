@@ -66,27 +66,31 @@ export default function Navbar() {
       />
 
       <nav
-        className="fixed top-0 left-0 right-0 z-[90] transition-all duration-300"
+        className="fixed top-6 left-1/2 -translate-x-1/2 z-[90] transition-all duration-300 rounded-full"
         style={{
+          width: scrolled ? "auto" : "calc(100% - 48px)",
+          maxWidth: "1200px",
           background: scrolled
-            ? "rgba(11,11,15,0.85)"
-            : "rgba(11,11,15,0.4)",
+            ? "rgba(5,5,5,0.75)"
+            : "rgba(5,5,5,0.4)",
           backdropFilter: "blur(20px)",
           WebkitBackdropFilter: "blur(20px)",
-          borderBottom: scrolled
-            ? "1px solid rgba(255,255,255,0.07)"
-            : "1px solid transparent",
-          boxShadow: scrolled ? "0 4px 30px rgba(0,0,0,0.3)" : "none",
+          border: "1px solid rgba(255,255,255,0.06)",
+          boxShadow: scrolled ? "0 10px 40px rgba(0,0,0,0.5)" : "none",
         }}
       >
-        <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="px-6 h-14 flex items-center justify-between gap-12">
           {/* Logo */}
           <a
             href="#"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            className="text-xl font-black tracking-tight gradient-text select-none"
+            className="flex items-center gap-1.5 select-none group"
           >
-            PA
+            <span className="text-base font-black tracking-tight gradient-text">Abhishek</span>
+            <span
+              className="w-1.5 h-1.5 rounded-full bg-[#7F5AF0] opacity-80 group-hover:opacity-100 transition-opacity"
+              style={{ boxShadow: "0 0 6px #7F5AF0" }}
+            />
           </a>
 
           {/* Desktop links */}
@@ -97,15 +101,15 @@ export default function Navbar() {
                 <button
                   key={link.href}
                   onClick={() => handleNav(link.href)}
-                  className="relative px-2 py-2 text-sm font-semibold transition-all duration-300 hover:text-white"
-                  style={{ color: isActive ? "#F5F5F5" : "rgba(255,255,255,0.45)" }}
+                  className="relative px-2 py-2 text-[11px] font-mono tracking-widest uppercase transition-all duration-300 hover:text-white"
+                  style={{ color: isActive ? "#FFFFFF" : "rgba(255,255,255,0.4)" }}
                 >
                   {link.label}
                   {isActive && (
                     <motion.span
                       layoutId="underline"
-                      className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-[2px] rounded-full"
-                      style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }}
+                      className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-full h-[1px]"
+                      style={{ background: "#00F0FF", boxShadow: "0 0 10px #00F0FF" }}
                     />
                   )}
                 </button>

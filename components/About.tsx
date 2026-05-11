@@ -15,12 +15,12 @@ export default function About() {
           <p className="text-[#7F5AF0] text-sm font-semibold tracking-widest uppercase mb-3">
             01. About Me
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Who I Am</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Who I Am</h2>
           <div className="w-20 h-1 rounded-full" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          <motion.div variants={slideLeft} className="flex flex-col gap-6 text-white/60 text-base md:text-lg leading-relaxed">
+          <motion.div variants={slideLeft} className="flex flex-col gap-6 text-white/60 text-sm md:text-base leading-relaxed">
             <p>
               I&apos;m a final-year <strong className="text-white font-medium">Computer Science Engineering student</strong> at Guru Nanak Institutions Technical Campus, specializing in <strong className="text-[#7F5AF0] font-medium">AI, machine learning, and computer vision</strong>.
             </p>

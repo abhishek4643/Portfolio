@@ -8,10 +8,13 @@ import Achievements from "@/components/Achievements";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { MarqueeWidget } from "@/components/MarqueeWidget";
+import IntroAnimation from "@/components/IntroAnimation";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-black min-h-screen">
+      <div className="noise-overlay" />
+      <IntroAnimation />
       <Navbar />
       <Hero />
       <MarqueeWidget />

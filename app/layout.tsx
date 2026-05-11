@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import CustomCursor from "@/components/CustomCursor";
 
-const inter = Inter({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-jakarta",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -38,8 +43,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="antialiased selection:bg-[#7F5AF0]/30 selection:text-white font-sans text-sm md:text-base bg-background text-white">
+    <html lang="en" className={`${plusJakarta.variable} ${jetbrainsMono.variable}`}>
+      <body className="antialiased selection:bg-[#7F5AF0]/30 selection:text-white font-sans text-sm md:text-base bg-black text-white">
         <CustomCursor />
         {children}
       </body>

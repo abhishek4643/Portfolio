@@ -1,13 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/lib/animations";
+import { TypewriterEffect } from "./TypewriterEffect";
 
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Animated Background Glow */}
-      <div className="hero-glow -top-[200px] -left-[200px] bg-[#7F5AF0]" />
-      <div className="hero-glow -bottom-[200px] -right-[200px] bg-[#00C2FF]" style={{ animationDelay: "2s" }} />
+      {/* Absolute Black Background with minimal radial glow */}
+      <div className="absolute inset-0 bg-black" />
+      <div className="hero-glow -top-[200px] -left-[200px] bg-[#7F5AF0] opacity-[0.08]" />
+      <div className="hero-glow -bottom-[200px] -right-[200px] bg-[#00F0FF] opacity-[0.05]" style={{ animationDelay: "2s" }} />
 
       <div className="max-w-4xl mx-auto text-center px-6 relative z-10 w-full">
         <motion.div
@@ -16,17 +18,17 @@ export default function Hero() {
           animate="visible"
           className="flex flex-col items-center"
         >
-          <motion.p variants={fadeUp} className="text-[#7F5AF0] text-sm md:text-base font-medium mb-4">
-            Hi, I&apos;m
-          </motion.p>
-          
-          <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight leading-tight">
-            Perumalla <span className="gradient-text pb-2 inline-block">Abhishek</span>
+          <motion.h1 
+            variants={fadeUp} 
+            className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9] mb-6"
+          >
+            PERUMALLA <br />
+            <span className="gradient-text inline-block">ABHISHEK</span>
           </motion.h1>
           
-          <motion.p variants={fadeUp} className="text-lg md:text-xl text-white/60 mb-4 font-medium tracking-wide">
-            AI & Computer Vision Engineer
-          </motion.p>
+          <motion.div variants={fadeUp} className="mb-4">
+            <TypewriterEffect />
+          </motion.div>
           
           <motion.p variants={fadeUp} className="text-sm md:text-base text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
             Final-year Computer Science student specializing in <strong className="text-[#7F5AF0]">AI, machine learning, and computer vision</strong>. Building production-ready AI systems with PyTorch, OpenCV, and Flask.
@@ -56,18 +58,18 @@ export default function Hero() {
           </motion.div>
 
           {/* Stats */}
-          <motion.div variants={fadeUp} className="grid grid-cols-3 gap-8 mt-16 w-full max-w-2xl mx-auto">
+          <motion.div variants={fadeUp} className="grid grid-cols-3 gap-8 mt-20 w-full max-w-2xl mx-auto border-t border-white/[0.05] pt-12">
             <div className="flex flex-col items-center justify-center">
-              <div className="text-2xl md:text-3xl font-black gradient-text">7+</div>
-              <div className="text-xs font-semibold text-white/50 mt-1 uppercase tracking-wider">National Wins</div>
+              <div className="text-2xl md:text-4xl font-black text-white">07<span className="text-[#00F0FF]">+</span></div>
+              <div className="font-mono text-[9px] md:text-[10px] text-white/40 mt-3 uppercase tracking-widest">National Wins</div>
+            </div>
+            <div className="flex flex-col items-center justify-center border-x border-white/[0.05]">
+              <div className="text-2xl md:text-4xl font-black text-white">03<span className="text-[#7F5AF0]">.</span></div>
+              <div className="font-mono text-[9px] md:text-[10px] text-white/40 mt-3 uppercase tracking-widest">Major Projects</div>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <div className="text-2xl md:text-3xl font-black gradient-text">3</div>
-              <div className="text-xs font-semibold text-white/50 mt-1 uppercase tracking-wider">Major Projects</div>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <div className="text-2xl md:text-3xl font-black gradient-text">97.03%</div>
-              <div className="text-xs font-semibold text-white/50 mt-1 uppercase tracking-wider">Naukri Percentile</div>
+              <div className="text-2xl md:text-4xl font-black text-white">97<span className="text-[#00F0FF]">%</span></div>
+              <div className="font-mono text-[9px] md:text-[10px] text-white/40 mt-3 uppercase tracking-widest">Naukri Percentile</div>
             </div>
           </motion.div>
         </motion.div>
