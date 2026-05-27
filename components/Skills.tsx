@@ -47,12 +47,9 @@ export default function Skills() {
         viewport={{ once: true, margin: "-80px" }}
       >
         {/* Heading */}
-        <motion.div variants={fadeUp} className="mb-12">
-          <p className="text-[#7F5AF0] text-sm font-semibold tracking-widest uppercase mb-3">
-            02. Technical Arsenal
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Skills & Expertise</h2>
-          <div className="w-20 h-1 rounded-full" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
+        <motion.div variants={fadeUp} className="mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF]">Skills and Technologies</h2>
+          <div className="w-20 h-1 rounded-full mx-auto" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
         </motion.div>
 
         {/* Grid */}

@@ -53,10 +53,7 @@ export default function Journey() {
       >
         {/* Heading */}
         <motion.div variants={fadeUp} className="mb-20 text-center">
-          <p className="text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: "#00C2FF" }}>
-            My Story
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">My Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF]">My Journey</h2>
           <div className="w-16 h-[3px] mx-auto rounded-full" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
         </motion.div>
 

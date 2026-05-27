@@ -63,11 +63,9 @@ export default function Projects() {
         viewport={{ once: true, margin: "-80px" }}
       >
         {/* Header */}
-        <motion.div variants={fadeUp} className="mb-12 border-b border-white/[0.05] pb-8">
-          <p className="font-mono text-[#00F0FF] text-[10px] md:text-xs font-semibold tracking-[0.4em] uppercase mb-3 opacity-70">
-            // Output Log
-          </p>
-          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase">My Projects</h2>
+        <motion.div variants={fadeUp} className="mb-12 border-b border-white/[0.05] pb-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF]">My Projects</h2>
+          <div className="w-16 h-[3px] mx-auto mt-4 rounded-full" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
         </motion.div>
 
         {/* Stack */}

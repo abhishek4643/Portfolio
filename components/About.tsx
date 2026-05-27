@@ -11,12 +11,9 @@ export default function About() {
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
       >
-        <motion.div variants={fadeUp} className="mb-12">
-          <p className="text-[#7F5AF0] text-sm font-semibold tracking-widest uppercase mb-3">
-            01. About Me
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Who I Am</h2>
-          <div className="w-20 h-1 rounded-full" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
+        <motion.div variants={fadeUp} className="mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF]">Who I Am</h2>
+          <div className="w-20 h-1 rounded-full mx-auto" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -28,7 +25,7 @@ export default function About() {
               I build <strong className="text-white font-medium">production-ready AI systems</strong> — from healthcare platforms with medical image analysis to real-time emotion detection systems. My work combines deep learning, computer vision, and web frameworks to create impactful solutions.
             </p>
             <p>
-              When I&apos;m not coding, I&apos;m leading teams at <strong className="text-[#00C2FF] font-medium">national-level hackathons</strong>, where I&apos;ve secured <strong className="text-white font-medium">7+ wins</strong> including recognition from ISRO and Microsoft.
+              When I&apos;m not coding, I&apos;m leading teams at <strong className="text-[#00C2FF] font-medium">national-level hackathons</strong>, where I&apos;ve secured <strong className="text-white font-medium">4+ wins</strong> including recognition from ISRO and Microsoft.
             </p>
             <p>
               I&apos;m passionate about applying AI to solve real-world problems in <strong className="text-[#7F5AF0] font-medium">healthcare, cybersecurity, and human-computer interaction</strong>.

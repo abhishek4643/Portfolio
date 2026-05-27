@@ -60,8 +60,8 @@ export default function Hero() {
           {/* Stats */}
           <motion.div variants={fadeUp} className="grid grid-cols-3 gap-8 mt-20 w-full max-w-2xl mx-auto border-t border-white/[0.05] pt-12">
             <div className="flex flex-col items-center justify-center">
-              <div className="text-2xl md:text-4xl font-black text-white">07<span className="text-[#00F0FF]">+</span></div>
-              <div className="font-mono text-[9px] md:text-[10px] text-white/40 mt-3 uppercase tracking-widest">National Wins</div>
+              <div className="text-2xl md:text-4xl font-black text-white">4<span className="text-[#00F0FF]">+</span></div>
+              <div className="font-mono text-[9px] md:text-[10px] text-white/40 mt-3 uppercase tracking-widest">Hackathon Wins</div>
             </div>
             <div className="flex flex-col items-center justify-center border-x border-white/[0.05]">
               <div className="text-2xl md:text-4xl font-black text-white">03<span className="text-[#7F5AF0]">.</span></div>

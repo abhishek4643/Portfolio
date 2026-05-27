@@ -32,8 +32,7 @@ export default function Footer() {
         ))}
       </div>
       <p className="text-sm" style={{ color: "rgba(255,255,255,0.3)" }}>
-        Designed &amp; Built with ❤️ by{" "}
-        <span className="gradient-text font-semibold">Perumalla Abhishek</span>
+        Designed &amp; Built by <span className="gradient-text font-semibold">Perumalla Abhishek</span>
       </p>
     </footer>
   );
