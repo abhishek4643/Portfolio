@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { Fraunces, JetBrains_Mono, Sora } from "next/font/google";
 import CustomCursor from "@/components/CustomCursor";
 
-const spaceGrotesk = Space_Grotesk({
+const headingFont = Fraunces({
   subsets: ["latin"],
   variable: "--font-heading",
+  weight: ["400", "600", "700"],
+});
+
+const bodyFont = Sora({
+  subsets: ["latin"],
+  variable: "--font-body",
   weight: ["300", "400", "500", "600", "700"],
 });
 
@@ -44,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable} ${jetbrainsMono.variable}`}>
       <body className="antialiased selection:bg-[#7F5AF0]/30 selection:text-white font-sans text-sm md:text-base bg-black text-white">
         <CustomCursor />
         {children}

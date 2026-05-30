@@ -5,9 +5,9 @@
   --color-card: #050505;
   --color-primary: #7F5AF0;
   --color-secondary: #00F0FF;
-  --font-sans: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
-  --font-body: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-heading), ui-serif, Georgia, serif;
+  --font-body: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono), ui-monospace, monospace;
 }
 
@@ -170,7 +170,7 @@ h4 {
   padding: 14px 18px;
   color: #F5F5F5;
   font-size: 0.95rem;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   transition: border-color 0.25s, box-shadow 0.25s;
   outline: none;
 }

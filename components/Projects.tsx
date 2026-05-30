@@ -64,8 +64,8 @@ export default function Projects() {
       >
         {/* Header */}
         <motion.div variants={fadeUp} className="mb-12 border-b border-white/[0.05] pb-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF]">My Projects</h2>
-          <div className="w-16 h-[3px] mx-auto mt-4 rounded-full" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF]">My Projects</h2>
+          <div className="w-20 h-1 rounded-full mx-auto" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
         </motion.div>
 
         {/* Stack */}
@@ -78,8 +78,15 @@ export default function Projects() {
                   <div className="flex flex-col h-full relative z-10">
                     {/* Top Row: Tag & Links */}
                     <div className="flex items-center justify-between mb-8 border-b border-white/[0.05] pb-5">
-                      <span className="font-mono text-[10px] text-white/50 tracking-[0.2em] uppercase">
-                        [{project.tag}]
+                      <span
+                        className="text-[13px] px-3 py-1.5 rounded-md font-medium border"
+                        style={{
+                          color: project.tagColor,
+                          backgroundColor: `${project.tagColor}22`,
+                          borderColor: `${project.tagColor}33`,
+                        }}
+                      >
+                        {project.tag}
                       </span>
                       <div className="flex gap-4">
                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-[#00F0FF] transition-colors">

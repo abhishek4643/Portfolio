@@ -37,7 +37,7 @@ export default function About() {
               <h3 className="text-xl font-semibold mb-8 text-[#7F5AF0]">Core Technologies</h3>
               <div className="space-y-6">
                 <div>
-                  <p className="text-sm text-white/50 mb-3 font-medium uppercase tracking-wider">AI & ML</p>
+                  <p className="text-sm text-white/50 mb-3 font-medium uppercase tracking-wider">AI &amp; ML</p>
                   <div className="flex flex-wrap gap-2">
                     {["PyTorch", "TensorFlow", "YOLO", "CNN", "NLP"].map(s => (
                       <span key={s} className="text-[13px] px-3 py-1.5 bg-[#7F5AF0]/10 border border-[#7F5AF0]/30 text-[#7F5AF0] rounded-lg font-medium">{s}</span>
@@ -53,7 +53,7 @@ export default function About() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm text-white/50 mb-3 font-medium uppercase tracking-wider">Web & Deployment</p>
+                  <p className="text-sm text-white/50 mb-3 font-medium uppercase tracking-wider">Web &amp; Deployment</p>
                   <div className="flex flex-wrap gap-2">
                     {["Flask", "Streamlit", "REST APIs"].map(s => (
                       <span key={s} className="text-[13px] px-3 py-1.5 bg-[#7F5AF0]/10 border border-[#7F5AF0]/30 text-[#7F5AF0] rounded-lg font-medium">{s}</span>

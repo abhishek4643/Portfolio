@@ -40,7 +40,7 @@ export default function Contact() {
             <span className="w-2 h-2 rounded-full bg-[#00C2FF] animate-pulse" />
             <span className="text-xs font-bold tracking-widest text-[#00C2FF] uppercase">Open To Opportunities</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6">
             Ready to build something <span className="gradient-text">extraordinary?</span>
           </h2>
         </motion.div>
