@@ -51,18 +51,31 @@ h4 {
 
 /* Hide default cursor on desktop only */
 @media (pointer: fine) {
-  * { cursor: none !important; }
+  * {
+    cursor: none !important;
+  }
 }
 
 /* Restore cursor on touch/mobile */
 @media (pointer: coarse) {
-  html { cursor: auto; }
-  * { cursor: auto !important; }
+  html {
+    cursor: auto;
+  }
+
+  * {
+    cursor: auto !important;
+  }
 }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: #0B0B0F; }
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B0F;
+}
+
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #7F5AF0, #00C2FF);
   border-radius: 2px;
@@ -96,6 +109,7 @@ h4 {
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 1);
   transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
+
 .glass:hover {
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.02);
@@ -115,8 +129,15 @@ h4 {
 }
 
 @keyframes float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(30px, 30px) scale(1.1); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(30px, 30px) scale(1.1);
+  }
 }
 
 /* Section base */
@@ -139,6 +160,7 @@ h4 {
   border: 1px solid rgba(127, 90, 240, 0.22);
   transition: all 0.2s ease;
 }
+
 .skill-pill:hover {
   background: rgba(127, 90, 240, 0.2);
   transform: scale(1.05);
@@ -151,7 +173,7 @@ h4 {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(180deg, transparent, rgba(127,90,240,0.5) 20%, rgba(0,194,255,0.5) 80%, transparent);
+  background: linear-gradient(180deg, transparent, rgba(127, 90, 240, 0.5) 20%, rgba(0, 194, 255, 0.5) 80%, transparent);
   transform: translateX(-50%);
 }
 
@@ -164,8 +186,8 @@ h4 {
 /* Input focus glow */
 .input-field {
   width: 100%;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.09);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 12px;
   padding: 14px 18px;
   color: #F5F5F5;
@@ -174,7 +196,11 @@ h4 {
   transition: border-color 0.25s, box-shadow 0.25s;
   outline: none;
 }
-.input-field::placeholder { color: rgba(255,255,255,0.3); }
+
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .input-field:focus {
   border-color: #7F5AF0;
   box-shadow: 0 0 0 3px rgba(127, 90, 240, 0.15);
@@ -182,21 +208,53 @@ h4 {
 
 /* Animate float */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
-.animate-float { animation: float 5s ease-in-out infinite; }
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
 
 /* Scroll indicator bounce */
 @keyframes bounce-subtle {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
 }
-.animate-bounce-subtle { animation: bounce-subtle 1.8s ease-in-out infinite; }
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 1.8s ease-in-out infinite;
+}
 
 /* Pulse dot */
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.8); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
 }
-.animate-pulse-dot { animation: pulse-dot 1.8s ease-in-out infinite; }
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}

@@ -12,7 +12,7 @@ export default function About() {
         viewport={{ once: true, margin: "-80px" }}
       >
         <motion.div variants={fadeUp} className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF]">Who I Am</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF]">About me</h2>
           <div className="w-20 h-1 rounded-full mx-auto" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
         </motion.div>
 

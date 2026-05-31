@@ -128,14 +128,6 @@ export default function IntroAnimation() {
             >
               Welcome
             </motion.h1>
-            <motion.h2
-              className="text-5xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#00F0FF] via-[#7F5AF0] to-[#00F0FF] tracking-[0.18em] uppercase"
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-            >
-              Abhishek
-            </motion.h2>
 
             <motion.div
               className="mt-8 w-64 h-[2px] bg-white/10 relative overflow-hidden"
