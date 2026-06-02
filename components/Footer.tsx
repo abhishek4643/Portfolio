@@ -12,7 +12,7 @@ export default function Footer() {
         {[
           { icon: GitHubIcon, href: "https://github.com/abhishek4643", label: "GitHub" },
           { icon: LinkedInIcon, href: "https://www.linkedin.com/in/abhishek-perumalla-a1ab57251", label: "LinkedIn" },
-          { icon: Mail, href: "mailto:abhishekp.perumalla@gmail.com", label: "Email" },
+          { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=abhishekp.perumalla@gmail.com", label: "Email" },
         ].map(({ icon: Icon, href, label }) => (
           <a
             key={label}

@@ -91,7 +91,7 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="flex items-center gap-5 mb-14">
             <div className="h-px w-10 bg-white/10" />
             <a
-              href="https://github.com/abhishekp4643"
+              href="https://github.com/abhishek4643"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/30 hover:text-white transition-colors"
@@ -102,7 +102,7 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/abhishekperumalla"
+              href="https://www.linkedin.com/in/abhishek-perumalla-a1ab57251"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/30 hover:text-[#0A66C2] transition-colors"
@@ -113,7 +113,9 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              href="mailto:abhishekp.perumalla@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishekp.perumalla@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white/30 hover:text-[#00F0FF] transition-colors"
               title="Email"
             >

@@ -34,7 +34,7 @@ const LINKS = [
     id: "email",
     label: "Email",
     handle: "abhishekp.perumalla@gmail.com",
-    href: "mailto:abhishekp.perumalla@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=abhishekp.perumalla@gmail.com",
     color: "#00F0FF",
     hoverColor: "#00F0FF",
     icon: (
@@ -142,7 +142,9 @@ export default function Contact() {
                   </AnimatePresence>
                 </button>
                 <a
-                  href="mailto:abhishekp.perumalla@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishekp.perumalla@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 hover:border-white/25 text-white/60 hover:text-white text-sm font-semibold transition-all hover:-translate-y-0.5"
                 >
                   Send mail
@@ -178,7 +180,7 @@ export default function Contact() {
             <a
               key={link.id}
               href={link.href}
-              target={link.id !== "email" ? "_blank" : undefined}
+              target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={() => setHoveredLink(link.id)}
               onMouseLeave={() => setHoveredLink(null)}
