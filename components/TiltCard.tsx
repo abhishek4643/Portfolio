@@ -61,7 +61,7 @@ export function TiltCard({ children, className = "" }: TiltCardProps) {
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{
-          background: `radial-gradient(600px circle at ${spotlightX}% ${spotlightY}%, rgba(127,90,240,0.15), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${spotlightX}% ${spotlightY}%, rgba(0, 255, 135,0.15), transparent 40%)`,
           zIndex: 1,
         }}
       />

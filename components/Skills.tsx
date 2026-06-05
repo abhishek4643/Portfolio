@@ -48,8 +48,8 @@ export default function Skills() {
       >
         {/* Heading */}
         <motion.div variants={fadeUp} className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF]">Skills and Technologies</h2>
-          <div className="w-20 h-1 rounded-full mx-auto" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#00FF87] to-[#00FF87]">Skills and Technologies</h2>
+          <div className="w-20 h-1 rounded-full mx-auto" style={{ background: "linear-gradient(90deg,#00FF87,#00FF87)" }} />
         </motion.div>
 
         {/* Grid */}
@@ -58,14 +58,14 @@ export default function Skills() {
             <motion.div key={cat.title} variants={scaleIn}>
               <TiltCard className="h-full">
                 <div
-                  className="glass p-8 rounded-2xl flex flex-col transition-all duration-300 h-full hover:border-violet-500/40 relative z-10"
+                  className="glass p-8 rounded-2xl flex flex-col transition-all duration-300 h-full  relative z-10"
                 >
                   <div 
                     className="w-10 h-[2px] rounded-full mb-6"
                     style={{ 
                       background: cat.colorTheme === "purple" 
-                        ? "linear-gradient(90deg, #7F5AF0, transparent)" 
-                        : "linear-gradient(90deg, #00C2FF, transparent)" 
+                        ? "linear-gradient(90deg, #00FF87, transparent)" 
+                        : "linear-gradient(90deg, #00FF87, transparent)" 
                     }}
                   />
                   <h3 className="text-xl font-semibold mb-4 text-white">{cat.title}</h3>

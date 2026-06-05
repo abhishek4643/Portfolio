@@ -8,156 +8,66 @@ export default function Hero() {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden py-20">
       {/* Background */}
       <div className="absolute inset-0 bg-black" />
-      <div className="hero-glow -top-[200px] -left-[200px] bg-[#7F5AF0] opacity-[0.08]" />
-      <div className="hero-glow -bottom-[200px] -right-[200px] bg-[#00F0FF] opacity-[0.05]" style={{ animationDelay: "2s" }} />
 
-      {/* Dot grid overlay */}
-      <div className="absolute inset-0 hero-grid opacity-30 pointer-events-none" />
-
-      {/* Animated vertical accent lines */}
-      <motion.div
-        initial={{ scaleY: 0, opacity: 0 }}
-        animate={{ scaleY: 1, opacity: 1 }}
-        transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
-        className="absolute left-8 md:left-16 top-1/4 h-48 w-px bg-gradient-to-b from-transparent via-[#7F5AF0]/40 to-transparent origin-top"
-      />
-      <motion.div
-        initial={{ scaleY: 0, opacity: 0 }}
-        animate={{ scaleY: 1, opacity: 1 }}
-        transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}
-        className="absolute right-8 md:right-16 top-1/3 h-32 w-px bg-gradient-to-b from-transparent via-[#00F0FF]/30 to-transparent origin-top"
-      />
-
-      <div className="max-w-4xl mx-auto text-center px-6 relative z-10 w-full">
+      <div className="max-w-3xl mx-auto text-center px-6 relative z-10 w-full">
         <motion.div
           variants={stagger}
           initial="hidden"
           animate="visible"
           className="flex flex-col items-center"
         >
-          {/* Greeting — always visible, no badge above it */}
+          {/* Greeting */}
           <motion.p
             variants={fadeUp}
-            className="text-sm md:text-base font-light text-white/40 tracking-[0.2em] mb-3 font-mono"
+            className="text-xs md:text-sm font-light text-white/40 tracking-[0.25em] mb-4 font-mono"
           >
-            hi, my name is
+            Hi, my name is
           </motion.p>
 
           {/* Name */}
           <motion.h1
             variants={fadeUp}
-            className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9] mb-6"
+            className="text-4xl md:text-7xl font-black text-[#00FF87] tracking-tight leading-tight mb-5"
           >
-            PERUMALLA <br />
-            <span className="gradient-text inline-block">ABHISHEK</span>
+            Perumalla Abhishek
           </motion.h1>
 
           {/* Typewriter */}
-          <motion.div variants={fadeUp} className="mb-5">
+          <motion.div variants={fadeUp} className="mb-8">
             <TypewriterEffect />
           </motion.div>
-
           {/* Bio */}
-          <motion.p variants={fadeUp} className="text-sm md:text-base text-white/50 max-w-xl mx-auto mb-8 leading-relaxed">
-            Final-year Computer Science student specializing in{" "}
-            <strong className="text-[#7F5AF0]">AI, machine learning, and computer vision</strong>. Building production-ready AI systems with PyTorch, OpenCV, and Flask.
+          <motion.p variants={fadeUp} className="text-sm md:text-base text-white/45 max-w-xl mx-auto mb-10 leading-relaxed">
+            Final-year Computer Science student specializing in AI and computer vision, with hands-on experience building production-ready applications using PyTorch, OpenCV, and Flask. Demonstrated ability to lead teams at national-level hackathons and deploy scalable, user-facing AI systems.
           </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div variants={fadeUp} className="flex flex-wrap items-center justify-center gap-4 mb-10">
-            <a
-              href="#projects"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#7F5AF0] hover:bg-[#6B47D1] rounded-lg font-semibold text-sm text-white transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(127,90,240,0.35)]"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-              </svg>
-              View Projects
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-white/10 hover:border-[#7F5AF0] hover:bg-[#7F5AF0]/10 rounded-lg font-semibold text-sm text-white transition-all hover:-translate-y-0.5"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              Get In Touch
-            </a>
-          </motion.div>
 
-          {/* Social Links */}
-          <motion.div variants={fadeUp} className="flex items-center gap-5 mb-14">
-            <div className="h-px w-10 bg-white/10" />
-            <a
-              href="https://github.com/abhishek4643"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/30 hover:text-white transition-colors"
-              title="GitHub"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-              </svg>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/abhishek-perumalla-a1ab57251"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/30 hover:text-[#0A66C2] transition-colors"
-              title="LinkedIn"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-            </a>
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishekp.perumalla@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/30 hover:text-[#00F0FF] transition-colors"
-              title="Email"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-            </a>
-            <div className="h-px w-10 bg-white/10" />
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
+          {/* Learn More link */}
+          <motion.a
             variants={fadeUp}
-            className="grid grid-cols-3 gap-8 w-full max-w-2xl mx-auto border-t border-white/[0.05] pt-10"
+            href="#about"
+            className="inline-flex items-center gap-2 text-sm text-[#00FF87] hover:text-[#00FF87]/80 transition-colors mb-16 group"
           >
-            <div className="flex flex-col items-center justify-center group">
-              <div className="text-2xl md:text-4xl font-black text-white group-hover:text-[#00F0FF] transition-colors">
-                4<span className="text-[#00F0FF]">+</span>
-              </div>
-              <div className="font-mono text-[9px] md:text-[10px] text-white/40 mt-2 uppercase tracking-widest">Hackathon Wins</div>
-            </div>
-            <div className="flex flex-col items-center justify-center border-x border-white/[0.05] group">
-              <div className="text-2xl md:text-4xl font-black text-white group-hover:text-[#7F5AF0] transition-colors">
-                03<span className="text-[#7F5AF0]">.</span>
-              </div>
-              <div className="font-mono text-[9px] md:text-[10px] text-white/40 mt-2 uppercase tracking-widest">Major Projects</div>
-            </div>
-            <div className="flex flex-col items-center justify-center group">
-              <div className="text-2xl md:text-4xl font-black text-white group-hover:text-[#00F0FF] transition-colors">
-                97<span className="text-[#00F0FF]">%</span>
-              </div>
-              <div className="font-mono text-[9px] md:text-[10px] text-white/40 mt-2 uppercase tracking-widest">Naukri Percentile</div>
-            </div>
-          </motion.div>
+            Learn More
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              className="group-hover:translate-x-1 transition-transform"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </motion.a>
 
           {/* Scroll indicator */}
           <motion.div
             variants={fadeUp}
-            className="mt-12 flex flex-col items-center gap-2 text-white/20"
+            className="flex flex-col items-center gap-2 text-white/20"
           >
-            <span className="text-[10px] font-mono tracking-widest uppercase">Scroll</span>
+            <span className="text-[10px] font-mono tracking-widest uppercase">Scroll Down</span>
             <motion.div
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

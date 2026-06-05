@@ -12,7 +12,7 @@ const achievements = [
     org: "ACUMEN Tech Fest 2026 · Vasavi College of Engineering",
     desc: "Built autonomous robotic systems leveraging sensor integration, path optimization, and real-time embedded control algorithms.",
     date: "Apr 2026",
-    accent: "#7F5AF0",
+    accent: "#00FF87",
     images: [
       {
         src: "/path 1.jpeg",
@@ -34,7 +34,7 @@ const achievements = [
     org: "ACUMEN Tech Fest 2026 · Vasavi College of Engineering",
     desc: "Developed obstacle detection and navigation system for autonomous robotics competition.",
     date: "Apr 2026",
-    accent: "#00C2FF",
+    accent: "#00FF87",
     images: [
       {
         src: "/Obsticle 1.jpeg",
@@ -52,7 +52,7 @@ const achievements = [
     org: "Mahindra University · MakeX Hackathon",
     desc: "Achieved 2nd Place after five progressive rounds that tested adaptability, speed, and technical execution. Built momentum through iterative improvements under pressure and secured the runner-up position.",
     date: "2026",
-    accent: "#7F5AF0",
+    accent: "#00FF87",
     images: [
       {
         src: "/make 1.jpeg",
@@ -74,7 +74,7 @@ const achievements = [
     org: "Naukri Campus · India's Largest Campus Skill Contest",
     desc: "Achieved top 3% ranking evaluated across aptitude, programming, and domain knowledge by industry experts.",
     date: "Sep 2025",
-    accent: "#7F5AF0",
+    accent: "#00FF87",
     images: [
       {
         src: "/97.03.jpg",
@@ -88,7 +88,7 @@ const achievements = [
     org: "B.V. Raju Institute of Technology · Health & Well-Being Domain",
     desc: "Built Purva Laksana, an AI healthcare companion with medical image analysis and multilingual chatbot support.",
     date: "Jul 2025",
-    accent: "#00C2FF",
+    accent: "#00FF87",
     images: [
       {
         src: "/Vyoma Hackathon at TechSurge2k25.jpg",
@@ -102,25 +102,11 @@ const achievements = [
     org: "MGIT · 200+ Teams · 24-Hour Competition",
     desc: "Developed emotion-based music recommendation system using CNN and Flask, competed nationally.",
     date: "Mar 2025",
-    accent: "#7F5AF0",
+    accent: "#00FF87",
     images: [
       {
         src: "/National level certificate(MGIT).jpg",
         alt: "MGIT national hackathon certificate",
-      },
-    ],
-  },
-  {
-    number: "07",
-    title: "Bharatiya Antariksh Hackathon 2025",
-    org: "ISRO · Hack2skill",
-    desc: "Submitted idea addressing space technology challenges; received Certificate of Acknowledgement from ISRO.",
-    date: "Jan 2025",
-    accent: "#00C2FF",
-    images: [
-      {
-        src: "/Hack2skill-Certificate.png",
-        alt: "Hack2skill certificate",
       },
     ],
   },
@@ -138,15 +124,15 @@ export default function Achievements() {
         viewport={{ once: true, margin: "-80px" }}
       >
         <motion.div variants={fadeUp} className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF]">Achievements & Awards</h2>
-          <div className="w-20 h-1 rounded-full mx-auto" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#00FF87] to-[#00FF87]">Achievements & Awards</h2>
+          <div className="w-20 h-1 rounded-full mx-auto" style={{ background: "linear-gradient(90deg,#00FF87,#00FF87)" }} />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {achievements.map((item, i) => (
             <motion.div key={i} variants={scaleIn}>
               <TiltCard className="h-full">
-                <div className="glass p-7 rounded-2xl flex flex-col transition-all duration-300 h-full hover:border-violet-500/40 relative z-10 overflow-hidden">
+                <div className="glass p-7 rounded-2xl flex flex-col transition-all duration-300 h-full  relative z-10 overflow-hidden">
                   {/* Accent number */}
                   <div
                     className="absolute top-5 right-6 text-5xl font-black select-none pointer-events-none"
@@ -171,7 +157,7 @@ export default function Achievements() {
                           key={image.src}
                           type="button"
                           onClick={() => setSelectedImage(image)}
-                          className="relative w-full overflow-hidden rounded-lg border border-white/10 aspect-[4/3] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00C2FF]/70"
+                          className="relative w-full overflow-hidden rounded-lg  aspect-[4/3] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00FF87]/70"
                           aria-label={`Open image: ${image.alt}`}
                         >
                           <Image
@@ -195,12 +181,12 @@ export default function Achievements() {
         {/* Education Section */}
         <motion.div variants={fadeUp} className="mt-20 text-center">
           <p className="label-mono mb-3">Education</p>
-          <h3 className="section-heading text-[1.8rem] md:text-[2.4rem] text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF] inline-block mb-8">Academic Journey</h3>
-          <div className="glass p-8 rounded-2xl hover:border-[#7F5AF0]/40 transition-colors duration-500 hover:shadow-[0_12px_40px_rgba(127,90,240,0.15)]">
+          <h3 className="section-heading text-[1.8rem] md:text-[2.4rem] text-transparent bg-clip-text bg-gradient-to-r from-[#00FF87] to-[#00FF87] inline-block mb-8">Academic Journey</h3>
+          <div className="glass p-8 rounded-2xl  transition-colors duration-500 hover:shadow-[0_12px_40px_rgba(0, 255, 135,0.15)]">
             <div className="flex flex-col items-center text-center gap-4">
               <div>
                 <h4 className="text-xl font-semibold mb-2 text-white" style={{ fontFamily: 'var(--font-heading)' }}>B.Tech in Computer Science and Engineering</h4>
-                <p className="text-[#7F5AF0] mb-2 font-medium label-mono" style={{ letterSpacing: '0.08em' }}>Guru Nanak Institutions Technical Campus</p>
+                <p className="text-[#00FF87] mb-2 font-medium label-mono" style={{ letterSpacing: '0.08em' }}>Guru Nanak Institutions Technical Campus</p>
                 <p className="text-white/45 text-[13px] mt-1">Hyderabad, India</p>
               </div>
               <div>
@@ -219,7 +205,7 @@ export default function Achievements() {
           aria-modal="true"
         >
           <div
-            className="relative w-full max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-black"
+            className="relative w-full max-w-4xl overflow-hidden rounded-2xl  bg-black"
             onClick={(event) => event.stopPropagation()}
           >
             <button

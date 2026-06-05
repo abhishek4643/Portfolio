@@ -35,7 +35,7 @@ export function MarqueeWidget() {
         {[...items, ...items, ...items].map((text, i) => (
           <span 
             key={i} 
-            className={`text-2xl md:text-3xl font-black uppercase tracking-widest ${text === "•" ? "text-[#7F5AF0]" : "text-white/10"}`}
+            className={`text-2xl md:text-3xl font-black uppercase tracking-widest ${text === "•" ? "text-[#00FF87]" : "text-white/10"}`}
           >
             {text}
           </span>

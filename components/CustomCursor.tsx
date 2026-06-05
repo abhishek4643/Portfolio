@@ -57,19 +57,21 @@ export default function CustomCursor() {
   return (
     <div className="fixed inset-0 pointer-events-none z-[9999] hidden md:block">
       <motion.div
-        className="absolute rounded-full border"
+        className="absolute rounded-full border border-[#00FF87]"
         style={{
           x: followX,
           y: followY,
           translateX: "-50%",
           translateY: "-50%",
-          borderColor: "rgba(0,240,255,0.85)",
-          boxShadow: "0 0 18px rgba(0,240,255,0.35)",
         }}
         animate={{
-          width: cursorState === "hover" ? 68 : 28,
-          height: cursorState === "hover" ? 68 : 28,
-          opacity: cursorState === "active" ? 0.9 : 0.75,
+          width: cursorState === "hover" ? 56 : 28,
+          height: cursorState === "hover" ? 56 : 28,
+          opacity: cursorState === "active" ? 0.9 : 0.8,
+          boxShadow: cursorState === "hover" 
+            ? "0 0 30px 4px rgba(0, 255, 135, 0.6), inset 0 0 15px rgba(0, 255, 135, 0.4)" 
+            : "0 0 15px rgba(0, 255, 135, 0.3)",
+          backgroundColor: cursorState === "hover" ? "rgba(0, 255, 135, 0.15)" : "transparent",
         }}
         transition={{ type: "spring", stiffness: 280, damping: 20 }}
       />

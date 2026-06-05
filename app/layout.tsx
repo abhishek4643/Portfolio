@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Fraunces, JetBrains_Mono, Sora } from "next/font/google";
+import { Oxanium, JetBrains_Mono } from "next/font/google";
 import CustomCursor from "@/components/CustomCursor";
 
-const headingFont = Fraunces({
+const oxanium = Oxanium({
   subsets: ["latin"],
-  variable: "--font-heading",
-  weight: ["400", "600", "700"],
-});
-
-const bodyFont = Sora({
-  subsets: ["latin"],
-  variable: "--font-body",
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-oxanium",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -50,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable} ${jetbrainsMono.variable}`}>
-      <body className="antialiased selection:bg-[#7F5AF0]/30 selection:text-white font-sans text-sm md:text-base bg-black text-white">
+    <html lang="en" className={`${oxanium.variable} ${jetbrainsMono.variable}`}>
+      <body className="antialiased selection:bg-[#00FF87]/30 selection:text-white font-sans text-sm md:text-base bg-[#0B0F14] text-[#F8FAFC]">
         <CustomCursor />
         {children}
       </body>

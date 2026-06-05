@@ -31,7 +31,7 @@ export default function IntroAnimation() {
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(circle at 50% 40%, rgba(0,240,255,0.16), transparent 45%), radial-gradient(circle at 40% 70%, rgba(127,90,240,0.2), transparent 55%)",
+                "radial-gradient(circle at 50% 40%, rgba(0, 255, 135,0.16), transparent 45%), radial-gradient(circle at 40% 70%, rgba(0, 255, 135,0.2), transparent 55%)",
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 0.55, 0.22] }}
@@ -76,7 +76,7 @@ export default function IntroAnimation() {
             className="absolute w-[70vmin] h-[70vmin] rounded-full"
             style={{
               background:
-                "conic-gradient(from 0deg, transparent, rgba(0,240,255,0.35) 18%, transparent 35%)",
+                "conic-gradient(from 0deg, transparent, rgba(0, 255, 135,0.35) 18%, transparent 35%)",
               WebkitMaskImage:
                 "radial-gradient(circle, transparent 60%, black 61%, black 67%, transparent 68%)",
               maskImage:
@@ -92,14 +92,14 @@ export default function IntroAnimation() {
             animate={{ rotate: 360 }}
             transition={{ duration: 6.5, repeat: Infinity, ease: "linear" }}
           >
-            <div className="absolute left-1/2 -translate-x-1/2 -top-1.5 w-2.5 h-2.5 rounded-full bg-[#00F0FF] shadow-[0_0_12px_rgba(0,240,255,0.8)]" />
+            <div className="absolute left-1/2 -translate-x-1/2 -top-1.5 w-2.5 h-2.5 rounded-full bg-[#00FF87] shadow-[0_0_12px_rgba(0, 255, 135,0.8)]" />
           </motion.div>
           <motion.div
             className="absolute w-[54vmin] h-[54vmin]"
             animate={{ rotate: -360 }}
             transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
           >
-            <div className="absolute left-1/2 -translate-x-1/2 -top-1 w-2 h-2 rounded-full bg-[#7F5AF0] shadow-[0_0_10px_rgba(127,90,240,0.7)]" />
+            <div className="absolute left-1/2 -translate-x-1/2 -top-1 w-2 h-2 rounded-full bg-[#00FF87] shadow-[0_0_10px_rgba(0, 255, 135,0.7)]" />
           </motion.div>
 
           {/* Center reticle */}
@@ -136,7 +136,7 @@ export default function IntroAnimation() {
               transition={{ duration: 0.4, delay: 0.5 }}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-[#00F0FF] via-[#7F5AF0] to-[#00F0FF]"
+                className="absolute inset-0 bg-gradient-to-r from-[#00FF87] via-[#00FF87] to-[#00FF87]"
                 initial={{ x: "-100%" }}
                 animate={{ x: "0%" }}
                 transition={{ duration: LOADING_DURATION, ease: "linear" }}

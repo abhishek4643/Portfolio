@@ -60,7 +60,7 @@ export default function Navbar() {
         className="fixed top-0 left-0 z-[100] h-[2px]"
         style={{
           width: `${progress}%`,
-          background: "linear-gradient(90deg, #7F5AF0, #00C2FF)",
+          background: "linear-gradient(90deg, #00FF87, #00FF87)",
           transition: "width 0.08s linear",
         }}
       />
@@ -75,23 +75,12 @@ export default function Navbar() {
             : "rgba(5,5,5,0.4)",
           backdropFilter: "blur(20px)",
           WebkitBackdropFilter: "blur(20px)",
-          border: "1px solid rgba(255,255,255,0.06)",
-          boxShadow: scrolled ? "0 10px 40px rgba(0,0,0,0.5)" : "none",
+          border: "1px solid rgba(255,255,255,0.02)",
+          borderTop: "1px solid rgba(0,255,135,0.3)",
+          boxShadow: scrolled ? "0 10px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(0,255,135,0.1)" : "none",
         }}
       >
-        <div className="px-6 h-14 flex items-center justify-between gap-12">
-          {/* Logo */}
-          <a
-            href="#"
-            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            className="flex items-center gap-1.5 select-none group"
-          >
-            <span className="text-base font-black tracking-tight gradient-text">Abhishek</span>
-            <span
-              className="w-1.5 h-1.5 rounded-full bg-[#7F5AF0] opacity-80 group-hover:opacity-100 transition-opacity"
-              style={{ boxShadow: "0 0 6px #7F5AF0" }}
-            />
-          </a>
+        <div className="px-6 h-14 flex items-center justify-center gap-12">
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
@@ -109,7 +98,7 @@ export default function Navbar() {
                     <motion.span
                       layoutId="underline"
                       className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-full h-[1px]"
-                      style={{ background: "#00F0FF", boxShadow: "0 0 10px #00F0FF" }}
+                      style={{ background: "#00FF87", boxShadow: "0 0 10px #00FF87" }}
                     />
                   )}
                 </button>

@@ -22,8 +22,8 @@ const LINKS = [
     label: "LinkedIn",
     handle: "abhishek-perumalla",
     href: "https://www.linkedin.com/in/abhishek-perumalla-a1ab57251",
-    color: "#0A66C2",
-    hoverColor: "#0A66C2",
+    color: "#00FF87",
+    hoverColor: "#00FF87",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -35,8 +35,8 @@ const LINKS = [
     label: "Email",
     handle: "abhishekp.perumalla@gmail.com",
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=abhishekp.perumalla@gmail.com",
-    color: "#00F0FF",
-    hoverColor: "#00F0FF",
+    color: "#00FF87",
+    hoverColor: "#00FF87",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -62,8 +62,8 @@ export default function Contact() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black py-24"
     >
       {/* Background glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-[#7F5AF0] opacity-[0.06] blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#00F0FF] opacity-[0.04] blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-[#00FF87] opacity-[0.06] blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#00FF87] opacity-[0.04] blur-[100px] pointer-events-none" />
 
       {/* Massive ghost text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
@@ -103,8 +103,8 @@ export default function Contact() {
           className="grid grid-cols-1 md:grid-cols-3 gap-4"
         >
           {/* Big email card */}
-          <div className="md:col-span-2 group relative rounded-2xl border border-white/[0.07] bg-white/[0.02] p-8 overflow-hidden hover:border-[#7F5AF0]/40 transition-all duration-500">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#7F5AF0]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="md:col-span-2 group relative rounded-2xl  bg-white/[0.02] p-8 overflow-hidden  transition-all duration-500">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#00FF87]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10">
               <p className="text-[10px] font-mono text-white/30 uppercase tracking-[0.25em] mb-3">Primary contact</p>
               <p className="text-xl md:text-2xl font-bold text-white mb-6 break-all">
@@ -113,7 +113,7 @@ export default function Contact() {
               <div className="flex items-center gap-3">
                 <button
                   onClick={handleCopy}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#7F5AF0] hover:bg-[#6B47D1] text-white text-sm font-semibold transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(127,90,240,0.4)]"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#00FF87] hover:bg-[#00FF87] text-white text-sm font-semibold transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0, 255, 135,0.4)]"
                 >
                   <AnimatePresence mode="wait">
                     {copied ? (
@@ -145,7 +145,7 @@ export default function Contact() {
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishekp.perumalla@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 hover:border-white/25 text-white/60 hover:text-white text-sm font-semibold transition-all hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10  text-white/60 hover:text-white text-sm font-semibold transition-all hover:-translate-y-0.5"
                 >
                   Send mail
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
@@ -155,15 +155,15 @@ export default function Contact() {
           </div>
 
           {/* Status card */}
-          <div className="relative rounded-2xl border border-white/[0.07] bg-white/[0.02] p-8 flex flex-col justify-between overflow-hidden">
-            <div className="absolute bottom-0 right-0 w-32 h-32 rounded-full bg-[#7F5AF0] opacity-[0.08] blur-[40px] pointer-events-none" />
+          <div className="relative rounded-2xl  bg-white/[0.02] p-8 flex flex-col justify-between overflow-hidden">
+            <div className="absolute bottom-0 right-0 w-32 h-32 rounded-full bg-[#00FF87] opacity-[0.08] blur-[40px] pointer-events-none" />
             <div>
               <p className="text-[10px] font-mono text-white/30 uppercase tracking-[0.25em] mb-4">Current status</p>
               <div className="flex flex-col gap-3">
                 {[
                   { dot: "bg-green-400", label: "Available to work" },
-                  { dot: "bg-[#7F5AF0]", label: "Open to freelance" },
-                  { dot: "bg-[#00F0FF]", label: "Up for collabs" },
+                  { dot: "bg-[#00FF87]", label: "Open to freelance" },
+                  { dot: "bg-[#00FF87]", label: "Up for collabs" },
                 ].map((s) => (
                   <div key={s.label} className="flex items-center gap-2.5">
                     <span className={`w-1.5 h-1.5 rounded-full ${s.dot} animate-pulse`} />
@@ -184,14 +184,14 @@ export default function Contact() {
               rel="noopener noreferrer"
               onMouseEnter={() => setHoveredLink(link.id)}
               onMouseLeave={() => setHoveredLink(null)}
-              className="group relative rounded-2xl border border-white/[0.07] bg-white/[0.02] p-6 flex items-center gap-4 overflow-hidden hover:border-white/15 transition-all duration-300 hover:-translate-y-0.5"
+              className="group relative rounded-2xl  bg-white/[0.02] p-6 flex items-center gap-4 overflow-hidden  transition-all duration-300 hover:-translate-y-0.5"
             >
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{ background: `radial-gradient(circle at 20% 50%, ${link.color}12 0%, transparent 70%)` }}
               />
               <div
-                className="relative z-10 w-10 h-10 rounded-xl flex items-center justify-center border border-white/[0.07] group-hover:border-white/20 transition-colors"
+                className="relative z-10 w-10 h-10 rounded-xl flex items-center justify-center  group- transition-colors"
                 style={{ color: hoveredLink === link.id ? link.hoverColor : "rgba(255,255,255,0.4)" }}
               >
                 {link.icon}

@@ -9,12 +9,12 @@ const projects = [
   {
     title: "Purva Laksana — AI Healthcare Companion",
     tag: "AI · Healthcare",
-    tagColor: "#7F5AF0",
+    tagColor: "#00FF87",
     date: "Jul 2025",
-    gradient: "linear-gradient(135deg,#7F5AF0,#00C2FF)",
+    gradient: "linear-gradient(135deg,#00FF87,#00FF87)",
     description: (
       <>
-        Comprehensive healthcare AI platform leveraging <strong className="text-white">computer vision</strong> for medical image analysis, <strong className="text-purple-400">heart rate monitoring</strong>, and <strong className="text-cyan-400">disease risk prediction</strong>. Integrated multilingual AI chatbot powered by NLP for patient queries, deployed on Streamlit Cloud with real-time health updates.
+        Comprehensive healthcare AI platform leveraging <strong className="text-white">computer vision</strong> for medical image analysis, <strong className="text-white">heart rate monitoring</strong>, and <strong className="text-white">disease risk prediction</strong>. Integrated multilingual AI chatbot powered by NLP for patient queries, deployed on Streamlit Cloud with real-time health updates.
       </>
     ),
     tech: ["Python", "PyTorch", "OpenCV", "Streamlit", "NLP"],
@@ -24,12 +24,12 @@ const projects = [
   {
     title: "Emotion-Based Music Recommendation System",
     tag: "Deep Learning · CV",
-    tagColor: "#FF3366",
+    tagColor: "#00FF87",
     date: "Oct 2025",
-    gradient: "linear-gradient(135deg,#FF3366,#FF9933)",
+    gradient: "linear-gradient(135deg,#00FF87,#00FF87)",
     description: (
       <>
-        Real-time <strong className="text-white">facial emotion recognition system</strong> using deep learning that detects user mood from live camera input and serves personalized music via YouTube. Trained custom <strong className="text-purple-400">CNN from scratch</strong> to classify 7 emotional states with <strong className="text-cyan-400">95% accuracy</strong>. Full end-to-end pipeline with Flask backend.
+        Real-time <strong className="text-white">facial emotion recognition system</strong> using deep learning that detects user mood from live camera input and serves personalized music via YouTube. Trained custom <strong className="text-white">CNN from scratch</strong> to classify 7 emotional states with <strong className="text-white">95% accuracy</strong>. Full end-to-end pipeline with Flask backend.
       </>
     ),
     tech: ["Python", "Flask", "OpenCV", "CNN", "Deep Learning"],
@@ -39,12 +39,12 @@ const projects = [
   {
     title: "Automated Network Reconnaissance — Nmap & Bash",
     tag: "Cybersecurity",
-    tagColor: "#00F260",
+    tagColor: "#00FF87",
     date: "Mar 2025",
-    gradient: "linear-gradient(135deg, #00F260, #0575E6)",
+    gradient: "linear-gradient(135deg, #00FF87, #00FF87)",
     description: (
       <>
-        Modular <strong className="text-white">Bash-based network scanning automation tool</strong> that wraps Nmap operations. Implemented CLI with argument parsing, <strong className="text-purple-400">multi-format output</strong> (text/XML), timestamped archives. Integrated <strong className="text-cyan-400">OS detection, NSE vulnerability scanning</strong>, and service version identification.
+        Modular <strong className="text-white">Bash-based network scanning automation tool</strong> that wraps Nmap operations. Implemented CLI with argument parsing, <strong className="text-white">multi-format output</strong> (text/XML), timestamped archives. Integrated <strong className="text-white">OS detection, NSE vulnerability scanning</strong>, and service version identification.
       </>
     ),
     tech: ["Bash", "Nmap", "Linux", "Shell Scripting"],
@@ -64,8 +64,8 @@ export default function Projects() {
       >
         {/* Header */}
         <motion.div variants={fadeUp} className="mb-12 border-b border-white/[0.05] pb-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#7F5AF0] to-[#00C2FF]">My Projects</h2>
-          <div className="w-20 h-1 rounded-full mx-auto" style={{ background: "linear-gradient(90deg,#7F5AF0,#00C2FF)" }} />
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#00FF87] to-[#00FF87]">My Projects</h2>
+          <div className="w-20 h-1 rounded-full mx-auto" style={{ background: "linear-gradient(90deg,#00FF87,#00FF87)" }} />
         </motion.div>
 
         {/* Stack */}
@@ -73,7 +73,7 @@ export default function Projects() {
           {projects.map((project, idx) => (
             <motion.div key={idx} variants={fadeUp}>
               <TiltCard className="h-full">
-                <article className="group relative glass rounded-xl overflow-hidden p-8 md:p-10 h-full">
+                <article className="group relative rounded-2xl glass p-8 overflow-hidden transition-all duration-500 flex flex-col h-full">
                   
                   <div className="flex flex-col h-full relative z-10">
                     {/* Top Row: Tag & Links */}
@@ -89,10 +89,10 @@ export default function Projects() {
                         {project.tag}
                       </span>
                       <div className="flex gap-4">
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-[#00F0FF] transition-colors">
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-[#00FF87] transition-colors">
                           <GitHubIcon size={18} />
                         </a>
-                        <a href={project.link} className="text-white/30 hover:text-[#7F5AF0] transition-colors">
+                        <a href={project.link} className="text-white/30 hover:text-[#00FF87] transition-colors">
                           <ExternalLink size={18} />
                         </a>
                       </div>
