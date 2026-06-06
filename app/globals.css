@@ -2,7 +2,6 @@
 
 @theme inline {
   --color-background: #0B0F14;
-  --color-card: #121821;
   --color-primary: #00FF87;
   --color-secondary: #00FF87;
   --font-sans: var(--font-oxanium), ui-sans-serif, system-ui, sans-serif;
@@ -103,17 +102,17 @@ h4 {
 
 /* Minimalist card */
 .glass {
-  background: #121821;
+  background: transparent;
   border: none;
   border-radius: 16px;
   position: relative;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-  box-shadow: none; /* No default border or shadow */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: none;
 }
 
 .glass:hover {
-  transform: translateY(-4px) scale(1.015);
-  box-shadow: 0 16px 40px rgba(0, 255, 135, 0.15); /* Keep the glow on hover */
+  transform: translateY(-4px);
+  box-shadow: none;
   z-index: 10;
 }
 

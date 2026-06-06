@@ -7,32 +7,26 @@ import { TiltCard } from "./TiltCard";
 const skillCategories = [
   {
     title: "AI & Machine Learning",
-    colorTheme: "purple",
     skills: ["PyTorch", "TensorFlow", "YOLO", "Ultralytics", "CNN", "NLP", "Deep Learning"],
   },
   {
     title: "Computer Vision",
-    colorTheme: "cyan",
     skills: ["OpenCV", "Image Classification", "Object Detection", "Real-Time Analysis", "Medical Imaging"],
   },
   {
     title: "Web & Deployment",
-    colorTheme: "purple",
     skills: ["Flask", "Streamlit", "REST APIs", "HTML/CSS", "Streamlit Cloud"],
   },
   {
     title: "Cybersecurity",
-    colorTheme: "cyan",
     skills: ["Nmap", "Network Reconnaissance", "Vulnerability Scanning", "Bash Scripting"],
   },
   {
     title: "Tools & Platforms",
-    colorTheme: "purple",
     skills: ["Git / GitHub", "Google Colab", "VS Code", "Roboflow", "Tableau"],
   },
   {
     title: "Core CS Concepts",
-    colorTheme: "cyan",
     skills: ["Data Structures", "Algorithms", "OOP", "DBMS"],
   },
 ];
@@ -58,14 +52,12 @@ export default function Skills() {
             <motion.div key={cat.title} variants={scaleIn}>
               <TiltCard className="h-full">
                 <div
-                  className="glass p-8 rounded-2xl flex flex-col transition-all duration-300 h-full  relative z-10"
+                  className="p-8 rounded-2xl flex flex-col transition-all duration-300 h-full relative z-10"
                 >
                   <div 
                     className="w-10 h-[2px] rounded-full mb-6"
                     style={{ 
-                      background: cat.colorTheme === "purple" 
-                        ? "linear-gradient(90deg, #00FF87, transparent)" 
-                        : "linear-gradient(90deg, #00FF87, transparent)" 
+                      background: "linear-gradient(90deg, #00FF87, transparent)" 
                     }}
                   />
                   <h3 className="text-xl font-semibold mb-4 text-white">{cat.title}</h3>
@@ -74,11 +66,12 @@ export default function Skills() {
                     {cat.skills.map((skill) => (
                       <span
                         key={skill}
-                        className={`text-[13px] px-3 py-1.5 rounded-md font-medium transition-transform hover:-translate-y-0.5 ${
-                          cat.colorTheme === "purple" 
-                            ? "bg-purple-500/20 text-purple-300 border border-purple-500/10" 
-                            : "bg-cyan-500/20 text-cyan-300 border border-cyan-500/10"
-                        }`}
+                        className="text-[13px] px-3 py-1.5 rounded-md font-medium transition-transform hover:-translate-y-0.5"
+                        style={{
+                          background: "rgba(0, 255, 135, 0.1)",
+                          color: "rgba(0, 255, 135, 0.85)",
+                          border: "1px solid rgba(0, 255, 135, 0.15)",
+                        }}
                       >
                         {skill}
                       </span>

@@ -1,18 +1,114 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const LOADING_DURATION = 2.1;
-const EXIT_DELAY = 3.3;
+const textString = "INITIALIZING...";
+const TYPE_INTERVAL = 0.14; // seconds per char
+const HOLD_TIME = 2.5; // stabilizes at 2.5s
+
+// Deterministic pseudo-random generator
+const pseudoRandom = (seed: number) => {
+  const x = Math.sin(seed * 999.99) * 10000;
+  return x - Math.floor(x);
+};
 
 export default function IntroAnimation() {
   const [isVisible, setIsVisible] = useState(true);
 
+  // Pre-calculate glitch frames to avoid hydration mismatch
+  const { glitchData } = useMemo(() => {
+    const FPS = 60;
+    const TOTAL_FRAMES = Math.floor(3.5 * FPS);
+
+    const shakeX = [];
+    const shakeY = [];
+    const textShadows = [];
+    const bgFlash = [];
+    const shakeTimes = [];
+
+    for (let frame = 0; frame <= TOTAL_FRAMES; frame++) {
+      const t = frame / FPS;
+      shakeTimes.push(Math.round((t / 3.5) * 1000) / 1000);
+
+      if (t >= HOLD_TIME) {
+        // Stabilization phase: Pristine stillness with subtle green aura pulse
+        shakeX.push(0);
+        shakeY.push(0);
+        
+        // Sine wave for smooth pulsing glow during the hold
+        const pulse = (Math.sin((t - HOLD_TIME) * 12) + 1) / 2; // 0 to 1
+        const glowOpacity = Math.round((0.2 + pulse * 0.4) * 100) / 100;
+        const glowSpread = Math.round((12 + pulse * 12) * 100) / 100;
+        
+        textShadows.push(`0px 0px 8px rgba(0,255,135,0.8), 0px 0px ${glowSpread}px rgba(0,255,135,${glowOpacity})`);
+        bgFlash.push("rgba(0,0,0,0)");
+      } else {
+        let intensity = 0;
+        let isStrike = false;
+
+        if (t <= textString.length * TYPE_INTERVAL) {
+          // Typing phase
+          const charIndex = Math.floor(t / TYPE_INTERVAL);
+          const timeSinceStrike = t - (charIndex * TYPE_INTERVAL);
+          
+          // Tiny tap on keystroke
+          if (timeSinceStrike < 0.05) isStrike = true;
+
+          // Only shake heavily on the final 3 dots (indices 12, 13, 14)
+          if (charIndex >= 12) {
+            intensity = 2 + (charIndex - 11); // Ramps up: 3, 4, 5
+            if (pseudoRandom(frame * 7) > 0.5) isStrike = true; // Continuous glitching
+          } else {
+            // Almost completely still during normal letters
+            intensity = isStrike ? 0.5 : 0;
+          }
+        } else {
+          // After typing finishes (2.1s), hit peak tremor before stabilizing at 2.5s
+          if (t < 2.3) {
+            intensity = 6.0; // Violent final shake
+            if (pseudoRandom(frame * 7) > 0.3) isStrike = true; // Heavy flash
+          } else {
+            intensity = 0.2; // Winding down
+          }
+        }
+
+        // Clean, premium micro-tremors
+        const randX = pseudoRandom(frame * 1) - 0.5;
+        const randY = pseudoRandom(frame * 2) - 0.5;
+        
+        shakeX.push(Math.round(randX * intensity * 100) / 100);
+        shakeY.push(Math.round(randY * intensity * 100) / 100);
+
+        // Neon-green energy pulse flash (replaces white flash)
+        if (isStrike) {
+          bgFlash.push("rgba(0, 255, 135, 0.04)");
+        } else {
+          bgFlash.push("rgba(0, 0, 0, 0)");
+        }
+
+        // Tiny pure green glitch flashes (replaces red/cyan RGB split)
+        if (isStrike || pseudoRandom(frame * 5) > 0.95) {
+          const rgbScale = intensity * 1.5;
+          const shiftX = Math.round(randX * rgbScale * 100) / 100;
+          const shiftY = Math.round(randY * rgbScale * 100) / 100;
+          textShadows.push(`
+            ${shiftX}px ${shiftY}px 0 rgba(0,255,135,0.7), 
+            -${shiftX}px -${shiftY}px 0 rgba(0,200,100,0.5),
+            0 0 8px rgba(0,255,135,0.5)
+          `);
+        } else {
+          textShadows.push(`0 0 5px rgba(0,255,135,0.15)`); // Faint green glow around text
+        }
+      }
+    }
+    
+    return { glitchData: { shakeX, shakeY, textShadows, bgFlash, shakeTimes } };
+  }, []);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, EXIT_DELAY * 1000);
-
+    }, 3500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -21,137 +117,60 @@ export default function IntroAnimation() {
       {isVisible && (
         <motion.div
           key="intro-overlay"
+          className="fixed inset-0 z-[10000] flex items-center justify-center overflow-hidden bg-black"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut", delay: 0.25 }}
-          className="fixed inset-0 z-[10000] bg-black flex items-center justify-center overflow-hidden"
+          animate={{ opacity: [1, 1, 0] }}
+          transition={{ duration: 3.5, times: [0, 3.0 / 3.5, 1], ease: "easeInOut" }}
+          exit={{ opacity: 0, transition: { duration: 0.1 } }}
         >
-          {/* Vignette + glow */}
+          {/* Subtle Neon-Green Energy Pulse synchronized with typing */}
           <motion.div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(circle at 50% 40%, rgba(0, 255, 135,0.16), transparent 45%), radial-gradient(circle at 40% 70%, rgba(0, 255, 135,0.2), transparent 55%)",
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 0.55, 0.22] }}
-            transition={{ duration: 2.2, ease: "easeInOut" }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.7) 70%)",
-            }}
+            className="absolute inset-0 pointer-events-none mix-blend-screen z-0"
+            animate={{ backgroundColor: glitchData.bgFlash }}
+            transition={{ duration: 3.5, times: glitchData.shakeTimes, ease: "linear" }}
           />
 
-          {/* Calibration rings */}
-          <motion.div
-            className="absolute w-[74vmin] h-[74vmin] rounded-full"
-            style={{
-              backgroundImage:
-                "repeating-conic-gradient(from 0deg, rgba(255,255,255,0.25) 0deg 2deg, transparent 2deg 9deg)",
-              WebkitMaskImage:
-                "radial-gradient(circle, transparent 62%, black 63%, black 66%, transparent 67%)",
-              maskImage:
-                "radial-gradient(circle, transparent 62%, black 63%, black 66%, transparent 67%)",
-            }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+          {/* Soft Scanline Interference Overlay */}
+          <div 
+            className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-overlay z-0" 
+            style={{ backgroundImage: "repeating-linear-gradient(to bottom, transparent, transparent 2px, rgba(0,255,135,1) 2px, rgba(0,255,135,1) 4px)" }} 
           />
-          <motion.div
-            className="absolute w-[60vmin] h-[60vmin] rounded-full border border-white/10"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: [0, 0.7, 0.3], scale: [0.95, 1, 1.02] }}
-            transition={{ duration: 1.4, ease: "easeOut" }}
-          />
-          <motion.div
-            className="absolute w-[44vmin] h-[44vmin] rounded-full border border-white/15"
-            animate={{ opacity: [0.1, 0.35, 0.2] }}
-            transition={{ duration: 2.4, ease: "easeInOut", repeat: Infinity, repeatType: "mirror" }}
-          />
+          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_0%,#000_100%)] opacity-80 z-0" />
 
-          {/* Sweep arc */}
+          {/* Central Shake Container - Small Font */}
           <motion.div
-            className="absolute w-[70vmin] h-[70vmin] rounded-full"
-            style={{
-              background:
-                "conic-gradient(from 0deg, transparent, rgba(0, 255, 135,0.35) 18%, transparent 35%)",
-              WebkitMaskImage:
-                "radial-gradient(circle, transparent 60%, black 61%, black 67%, transparent 68%)",
-              maskImage:
-                "radial-gradient(circle, transparent 60%, black 61%, black 67%, transparent 68%)",
-            }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 3.2, repeat: Infinity, ease: "linear" }}
-          />
-
-          {/* Orbiting markers */}
-          <motion.div
-            className="absolute w-[66vmin] h-[66vmin]"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 6.5, repeat: Infinity, ease: "linear" }}
-          >
-            <div className="absolute left-1/2 -translate-x-1/2 -top-1.5 w-2.5 h-2.5 rounded-full bg-[#00FF87] shadow-[0_0_12px_rgba(0, 255, 135,0.8)]" />
-          </motion.div>
-          <motion.div
-            className="absolute w-[54vmin] h-[54vmin]"
-            animate={{ rotate: -360 }}
-            transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
-          >
-            <div className="absolute left-1/2 -translate-x-1/2 -top-1 w-2 h-2 rounded-full bg-[#00FF87] shadow-[0_0_10px_rgba(0, 255, 135,0.7)]" />
-          </motion.div>
-
-          {/* Center reticle */}
-          <div className="absolute w-16 h-[1px] bg-white/15" />
-          <div className="absolute h-16 w-[1px] bg-white/15" />
-
-          {/* Pulse ring */}
-          <motion.div
-            className="absolute w-[26vmin] h-[26vmin] rounded-full border border-white/10"
-            animate={{ scale: [0.75, 1.05], opacity: [0, 0.35, 0] }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: "easeOut" }}
-          />
-
-          {/* Content */}
-          <motion.div
-            className="relative z-10 flex flex-col items-center justify-center text-center px-6"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            className="relative z-20 flex items-center justify-center"
+            animate={{ x: glitchData.shakeX, y: glitchData.shakeY }}
+            transition={{ duration: 3.5, times: glitchData.shakeTimes, ease: "linear" }}
           >
             <motion.h1
-              className="mt-3 text-3xl md:text-5xl font-black text-white tracking-[0.18em] uppercase"
-              initial={{ opacity: 0, letterSpacing: "0.34em" }}
-              animate={{ opacity: 1, letterSpacing: "0.18em" }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+              className="text-sm md:text-base lg:text-lg font-light uppercase tracking-[0.4em] whitespace-nowrap flex items-center"
+              style={{ fontFamily: "var(--font-heading)" }}
+              animate={{ textShadow: glitchData.textShadows }}
+              transition={{ duration: 3.5, times: glitchData.shakeTimes, ease: "linear" }}
             >
-              Welcome
-            </motion.h1>
+              <div className="flex">
+                {textString.split("").map((char, i) => (
+                  <motion.span
+                    key={i}
+                    className="text-[#00FF87] inline-block"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0, delay: i * TYPE_INTERVAL }}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </div>
 
-            <motion.div
-              className="mt-8 w-64 h-[2px] bg-white/10 relative overflow-hidden"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.5 }}
-            >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-[#00FF87] via-[#00FF87] to-[#00FF87]"
-                initial={{ x: "-100%" }}
-                animate={{ x: "0%" }}
-                transition={{ duration: LOADING_DURATION, ease: "linear" }}
+              {/* Minimal Blinking Terminal Cursor */}
+              <motion.span
+                className="w-1.5 md:w-2 h-[1em] bg-[#00FF87] ml-2 inline-block"
+                style={{ boxShadow: "0 0 10px rgba(0,255,135,0.7)" }}
+                animate={{ opacity: [1, 1, 0, 0] }}
+                transition={{ duration: 0.8, repeat: Infinity, ease: "linear", times: [0, 0.49, 0.5, 1] }}
               />
-            </motion.div>
-          </motion.div>
-
-          {/* Status line */}
-          <motion.div
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[10px] md:text-[11px] font-mono uppercase tracking-[0.4em] text-white/45"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.6 }}
-          >
-            Initializing...
+            </motion.h1>
           </motion.div>
         </motion.div>
       )}

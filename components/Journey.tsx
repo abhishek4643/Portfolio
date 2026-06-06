@@ -70,7 +70,7 @@ export default function Journey() {
                   {/* Desktop: alternating sides */}
                   <motion.div
                     variants={isLeft ? slideLeft : slideRight}
-                    className="w-full md:w-[calc(50%-36px)] glass p-6 hover:-translate-y-1 transition-all duration-300"
+                    className="w-full md:w-[calc(50%-36px)] p-6 hover:-translate-y-1 transition-all duration-300"
                     style={{
                       marginLeft: isLeft ? 0 : "auto",
                       marginRight: isLeft ? "auto" : 0,

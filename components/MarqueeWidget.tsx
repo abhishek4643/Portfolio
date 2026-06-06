@@ -20,22 +20,19 @@ export function MarqueeWidget() {
       
       {/* Infinite scrolling track */}
       <motion.div
-        className="flex whitespace-nowrap gap-8 items-center"
-        animate={{ x: [0, -1000] }}
+        className="flex whitespace-nowrap items-center w-max"
+        animate={{ x: ["0%", "-50%"] }}
         transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 20,
-            ease: "linear",
-          },
+          repeat: Infinity,
+          ease: "linear",
+          duration: 50,
         }}
       >
-        {/* Render the items three times to ensure smooth infinite looping */}
-        {[...items, ...items, ...items].map((text, i) => (
+        {/* Render the items twice to ensure smooth infinite looping by translating -50% */}
+        {[...items, ...items].map((text, i) => (
           <span 
             key={i} 
-            className={`text-2xl md:text-3xl font-black uppercase tracking-widest ${text === "•" ? "text-[#00FF87]" : "text-white/10"}`}
+            className={`text-2xl md:text-3xl font-black uppercase tracking-widest mx-4 md:mx-6 ${text === "•" ? "text-[#00FF87]" : "text-white/40"}`}
           >
             {text}
           </span>

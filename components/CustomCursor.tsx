@@ -71,7 +71,7 @@ export default function CustomCursor() {
           boxShadow: cursorState === "hover" 
             ? "0 0 30px 4px rgba(0, 255, 135, 0.6), inset 0 0 15px rgba(0, 255, 135, 0.4)" 
             : "0 0 15px rgba(0, 255, 135, 0.3)",
-          backgroundColor: cursorState === "hover" ? "rgba(0, 255, 135, 0.15)" : "transparent",
+          backgroundColor: cursorState === "hover" ? "rgba(0, 255, 135, 0.15)" : "rgba(0, 255, 135, 0)",
         }}
         transition={{ type: "spring", stiffness: 280, damping: 20 }}
       />

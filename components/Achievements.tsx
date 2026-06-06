@@ -132,7 +132,7 @@ export default function Achievements() {
           {achievements.map((item, i) => (
             <motion.div key={i} variants={scaleIn}>
               <TiltCard className="h-full">
-                <div className="glass p-7 rounded-2xl flex flex-col transition-all duration-300 h-full  relative z-10 overflow-hidden">
+                <div className="p-7 rounded-2xl flex flex-col transition-all duration-300 h-full relative z-10 overflow-hidden">
                   {/* Accent number */}
                   <div
                     className="absolute top-5 right-6 text-5xl font-black select-none pointer-events-none"
@@ -182,7 +182,7 @@ export default function Achievements() {
         <motion.div variants={fadeUp} className="mt-20 text-center">
           <p className="label-mono mb-3">Education</p>
           <h3 className="section-heading text-[1.8rem] md:text-[2.4rem] text-transparent bg-clip-text bg-gradient-to-r from-[#00FF87] to-[#00FF87] inline-block mb-8">Academic Journey</h3>
-          <div className="glass p-8 rounded-2xl  transition-colors duration-500 hover:shadow-[0_12px_40px_rgba(0, 255, 135,0.15)]">
+          <div className="p-8 rounded-2xl">
             <div className="flex flex-col items-center text-center gap-4">
               <div>
                 <h4 className="text-xl font-semibold mb-2 text-white" style={{ fontFamily: 'var(--font-heading)' }}>B.Tech in Computer Science and Engineering</h4>

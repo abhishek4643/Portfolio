@@ -33,11 +33,11 @@ export default function About() {
           </motion.div>
 
           <motion.div variants={slideRight}>
-            <div className="glass p-8 md:p-10 rounded-[2rem]  transition-colors duration-500 hover:shadow-[0_12px_40px_rgba(0, 255, 135,0.15)]">
-              <h3 className="text-xl font-semibold mb-8 text-[#00FF87]">Core Technologies</h3>
-              <div className="space-y-6">
+            <div className="pt-1.5">
+              <h3 className="text-xl font-semibold mb-1 text-[#00FF87]">Core Technologies</h3>
+              <div className="space-y-3">
                 <div>
-                  <p className="text-sm text-white/50 mb-3 font-medium uppercase tracking-wider">AI &amp; ML</p>
+                  <p className="text-sm text-white/50 mb-2 font-medium uppercase tracking-wider">AI &amp; ML</p>
                   <div className="flex flex-wrap gap-2">
                     {["PyTorch", "TensorFlow", "YOLO", "CNN", "NLP"].map(s => (
                       <span key={s} className="text-[13px] px-3 py-1.5 bg-[#00FF87]/10 border border-[#00FF87]/30 text-[#00FF87] rounded-lg font-medium">{s}</span>
@@ -45,7 +45,7 @@ export default function About() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm text-white/50 mb-3 font-medium uppercase tracking-wider">Computer Vision</p>
+                  <p className="text-sm text-white/50 mb-2 font-medium uppercase tracking-wider">Computer Vision</p>
                   <div className="flex flex-wrap gap-2">
                     {["OpenCV", "Roboflow", "Image Classification"].map(s => (
                       <span key={s} className="text-[13px] px-3 py-1.5 bg-[#00FF87]/10 border border-[#00FF87]/30 text-[#00FF87] rounded-lg font-medium">{s}</span>
@@ -53,7 +53,7 @@ export default function About() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm text-white/50 mb-3 font-medium uppercase tracking-wider">Web &amp; Deployment</p>
+                  <p className="text-sm text-white/50 mb-2 font-medium uppercase tracking-wider">Web &amp; Deployment</p>
                   <div className="flex flex-wrap gap-2">
                     {["Flask", "Streamlit", "REST APIs"].map(s => (
                       <span key={s} className="text-[13px] px-3 py-1.5 bg-[#00FF87]/10 border border-[#00FF87]/30 text-[#00FF87] rounded-lg font-medium">{s}</span>
@@ -61,7 +61,7 @@ export default function About() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm text-white/50 mb-3 font-medium uppercase tracking-wider">Languages</p>
+                  <p className="text-sm text-white/50 mb-2 font-medium uppercase tracking-wider">Languages</p>
                   <div className="flex flex-wrap gap-2">
                     {["Python", "C", "Bash"].map(s => (
                       <span key={s} className="text-[13px] px-3 py-1.5 bg-[#00FF87]/10 border border-[#00FF87]/30 text-[#00FF87] rounded-lg font-medium">{s}</span>
