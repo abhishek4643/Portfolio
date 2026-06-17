@@ -7,7 +7,7 @@ import Journey from "@/components/Journey";
 import Achievements from "@/components/Achievements";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { MarqueeWidget } from "@/components/MarqueeWidget";
+
 import IntroAnimation from "@/components/IntroAnimation";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <IntroAnimation />
       <Navbar />
       <Hero />
-      <MarqueeWidget />
+
       <About />
       <Skills />
       <Projects />
