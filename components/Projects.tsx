@@ -22,7 +22,7 @@ const projects = [
     link: "#",
   },
   {
-    title: "Emotion-Based Music Recommendation System",
+    title: "Emotion-Based Music Recognition System",
     tag: "Deep Learning · CV",
     tagColor: "#00FF87",
     date: "Oct 2025",
