@@ -172,7 +172,12 @@ export default function Contact() {
                 ))}
               </div>
             </div>
-            <p className="text-[10px] font-mono text-white/20 mt-6">Based in Hyderabad, India 🇮🇳</p>
+            <p
+              className="text-[10px] font-mono text-[#00FF87]/60 mt-6 tracking-widest"
+              style={{ textShadow: "0 0 8px rgba(0,255,135,0.7), 0 0 20px rgba(0,255,135,0.4)" }}
+            >
+              Based in Hyderabad, India 🇮🇳
+            </p>
           </div>
 
           {/* Social link cards */}

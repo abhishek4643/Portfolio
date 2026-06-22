@@ -14,7 +14,7 @@ const projects = [
     gradient: "linear-gradient(135deg,#00FF87,#00FF87)",
     description: (
       <>
-        Comprehensive healthcare AI platform leveraging <strong className="text-white">computer vision</strong> for medical image analysis, <strong className="text-white">heart rate monitoring</strong>, and <strong className="text-white">disease risk prediction</strong>. Integrated multilingual AI chatbot powered by NLP for patient queries, deployed on Streamlit Cloud with real-time health updates.
+        Developed a healthcare AI application using <strong className="text-white">PyTorch</strong> and OpenCV to analyze <strong className="text-white">medical images</strong>, <strong className="text-white">track heart rate</strong> from camera feeds, and identify <strong className="text-white">disease risk</strong> indicators. Added a multilingual <strong className="text-white">NLP chatbot</strong> to allow patients to ask health-related questions in their native language, making the system easier to use. Hosted the application on <strong className="text-white">Streamlit Cloud</strong> to support multiple users at the same time with live health updates and automated reports. <strong className="text-white">Shortlisted</strong> at Vyoma National Hackathon (BVRIT, 200+ teams, Health &amp; Well-Being track).
       </>
     ),
     tech: ["Python", "PyTorch", "OpenCV", "Streamlit", "NLP"],
@@ -29,7 +29,7 @@ const projects = [
     gradient: "linear-gradient(135deg,#00FF87,#00FF87)",
     description: (
       <>
-        Real-time <strong className="text-white">facial emotion recognition system</strong> using deep learning that detects user mood from live camera input and serves personalized music via YouTube. Trained custom <strong className="text-white">CNN from scratch</strong> to classify 7 emotional states with <strong className="text-white">95% accuracy</strong>. Full end-to-end pipeline with Flask backend.
+        Created <strong className="text-white">a live application</strong> that detects <strong className="text-white">facial expressions</strong> through a webcam and suggests YouTube music based on the user&apos;s current emotion. Trained a <strong className="text-white">CNN</strong> model to classify <strong className="text-white">7 different emotions</strong>, reaching <strong className="text-white">95% accuracy</strong> on testing data. Combined the live camera feed, emotion prediction, and music playback into one <strong className="text-white">Flask + OpenCV</strong> application. Presented at HackSavvy-25 (MGIT, <strong className="text-white">24-hour national hackathon</strong>, 200+ competing teams).
       </>
     ),
     tech: ["Python", "Flask", "OpenCV", "CNN", "Deep Learning"],
@@ -37,14 +37,14 @@ const projects = [
     link: "#",
   },
   {
-    title: "Automated Network Reconnaissance — Nmap & Bash",
+    title: "Automated Network Reconnaissance Tool (Nmap & Bash)",
     tag: "Cybersecurity",
     tagColor: "#00FF87",
     date: "Mar 2025",
     gradient: "linear-gradient(135deg, #00FF87, #00FF87)",
     description: (
       <>
-        Modular <strong className="text-white">Bash-based network scanning automation tool</strong> that wraps Nmap operations. Implemented CLI with argument parsing, <strong className="text-white">multi-format output</strong> (text/XML), timestamped archives. Integrated <strong className="text-white">OS detection, NSE vulnerability scanning</strong>, and service version identification.
+        Wrote a Bash script using <strong className="text-white">Nmap</strong> to run quick, normal, and deep network scans <strong className="text-white">using CLI arguments</strong>, reducing the need to type out manual commands. Added <strong className="text-white">text and XML output formats</strong> with timestamps to keep track of scan results over time. Included <strong className="text-white">OS detection</strong>, service version checking, and <strong className="text-white">NSE</strong> scripts to find common <strong className="text-white">CVEs</strong> and <strong className="text-white">vulnerabilities</strong>. Ran tests on a local lab network to ensure the tool gave accurate and consistent results.
       </>
     ),
     tech: ["Bash", "Nmap", "Linux", "Shell Scripting"],
