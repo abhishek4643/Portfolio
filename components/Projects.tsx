@@ -14,7 +14,7 @@ const projects = [
     gradient: "linear-gradient(135deg,#00FF87,#00FF87)",
     description: (
       <>
-        Developed a healthcare AI application using <strong className="text-white">PyTorch</strong> and OpenCV to analyze <strong className="text-white">medical images</strong>, <strong className="text-white">track heart rate</strong> from camera feeds, and identify <strong className="text-white">disease risk</strong> indicators. Added a multilingual <strong className="text-white">NLP chatbot</strong> to allow patients to ask health-related questions in their native language, making the system easier to use. Hosted the application on <strong className="text-white">Streamlit Cloud</strong> to support multiple users at the same time with live health updates and automated reports. <strong className="text-white">Shortlisted</strong> at Vyoma National Hackathon (BVRIT, 200+ teams, Health &amp; Well-Being track).
+        Developed a healthcare AI application using <strong className="text-white font-medium">PyTorch</strong> and OpenCV to analyze <strong className="text-white font-medium">medical images</strong>, <strong className="text-white font-medium">track heart rate</strong> from camera feeds, and identify <strong className="text-white font-medium">disease risk</strong> indicators. Added a multilingual <strong className="text-white font-medium">NLP chatbot</strong> to allow patients to ask health-related questions in their native language. Hosted on <strong className="text-white font-medium">Streamlit Cloud</strong> for live health updates. <strong className="text-white font-medium">Shortlisted</strong> at Vyoma National Hackathon (BVRIT, 200+ teams).
       </>
     ),
     tech: ["Python", "PyTorch", "OpenCV", "Streamlit", "NLP"],
@@ -29,7 +29,7 @@ const projects = [
     gradient: "linear-gradient(135deg,#00FF87,#00FF87)",
     description: (
       <>
-        Created <strong className="text-white">a live application</strong> that detects <strong className="text-white">facial expressions</strong> through a webcam and suggests YouTube music based on the user&apos;s current emotion. Trained a <strong className="text-white">CNN</strong> model to classify <strong className="text-white">7 different emotions</strong>, reaching <strong className="text-white">95% accuracy</strong> on testing data. Combined the live camera feed, emotion prediction, and music playback into one <strong className="text-white">Flask + OpenCV</strong> application. Presented at HackSavvy-25 (MGIT, <strong className="text-white">24-hour national hackathon</strong>, 200+ competing teams).
+        Created <strong className="text-white font-medium">a live application</strong> that detects <strong className="text-white font-medium">facial expressions</strong> through a webcam and suggests YouTube music based on the user&apos;s current emotion. Trained a <strong className="text-white font-medium">CNN</strong> model to classify <strong className="text-white font-medium">7 different emotions</strong> with <strong className="text-white font-medium">95% accuracy</strong>. Combined live camera feed, emotion prediction, and music playback into one <strong className="text-white font-medium">Flask + OpenCV</strong> application. Presented at HackSavvy-25 (MGIT, <strong className="text-white font-medium">24-hour national hackathon</strong>, 200+ teams).
       </>
     ),
     tech: ["Python", "Flask", "OpenCV", "CNN", "Deep Learning"],
@@ -37,18 +37,93 @@ const projects = [
     link: "#",
   },
   {
-    title: "Automated Network Reconnaissance Tool (Nmap & Bash)",
+    title: "Veypass — Cloud-Native Bus Ticketing Platform",
+    tag: "Full-Stack · ML",
+    tagColor: "#00FF87",
+    date: "Aug 2025",
+    gradient: "linear-gradient(135deg,#00FF87,#00FF87)",
+    description: (
+      <>
+        Built a <strong className="text-white font-medium">cloud-native bus ticketing</strong> system with <strong className="text-white font-medium">React</strong> frontend and <strong className="text-white font-medium">FastAPI</strong> backend. Integrated a <strong className="text-white font-medium">Scikit-Learn ML model</strong> for dynamic pricing based on demand, distance, and seat occupancy. Implemented <strong className="text-white font-medium">JWT-encrypted QR code</strong> tickets for offline conductor verification. Features an interactive <strong className="text-white font-medium">3D seat selection</strong> UI with Framer Motion animations. Deployed on <strong className="text-white font-medium">Vercel + Render</strong> with Supabase PostgreSQL.
+      </>
+    ),
+    tech: ["React", "FastAPI", "Scikit-Learn", "PostgreSQL", "JWT", "Tailwind CSS"],
+    github: "https://github.com/abhishek4643/Veypass",
+    link: "https://veypass.vercel.app",
+  },
+  {
+    title: "Automated Network Reconnaissance Tool",
     tag: "Cybersecurity",
     tagColor: "#00FF87",
     date: "Mar 2025",
     gradient: "linear-gradient(135deg, #00FF87, #00FF87)",
     description: (
       <>
-        Wrote a Bash script using <strong className="text-white">Nmap</strong> to run quick, normal, and deep network scans <strong className="text-white">using CLI arguments</strong>, reducing the need to type out manual commands. Added <strong className="text-white">text and XML output formats</strong> with timestamps to keep track of scan results over time. Included <strong className="text-white">OS detection</strong>, service version checking, and <strong className="text-white">NSE</strong> scripts to find common <strong className="text-white">CVEs</strong> and <strong className="text-white">vulnerabilities</strong>. Ran tests on a local lab network to ensure the tool gave accurate and consistent results.
+        Wrote a Bash script using <strong className="text-white font-medium">Nmap</strong> to run quick, normal, and deep network scans <strong className="text-white font-medium">using CLI arguments</strong>, reducing the need for manual commands. Added <strong className="text-white font-medium">text and XML output formats</strong> with timestamps to track scan results. Included <strong className="text-white font-medium">OS detection</strong>, service version checking, and <strong className="text-white font-medium">NSE</strong> scripts to find common <strong className="text-white font-medium">CVEs</strong> and <strong className="text-white font-medium">vulnerabilities</strong>. Tested on a local lab network for accuracy.
       </>
     ),
     tech: ["Bash", "Nmap", "Linux", "Shell Scripting"],
     github: "https://github.com/abhishek4643/Nmap-Project",
+    link: "#",
+  },
+  {
+    title: "Vindela — Fine Dining Reservation System",
+    tag: "Full-Stack · MERN",
+    tagColor: "#00FF87",
+    date: "Aug 2025",
+    gradient: "linear-gradient(135deg,#00FF87,#00FF87)",
+    description: (
+      <>
+        Built a full-stack <strong className="text-white font-medium">Restaurant Reservation Management System</strong> with <strong className="text-white font-medium">React</strong>, Node.js, Express, and <strong className="text-white font-medium">MongoDB</strong>. Features customer-facing table reservations with <strong className="text-white font-medium">real-time availability</strong> checking and an admin command center. Implements <strong className="text-white font-medium">JWT-based role access control</strong> (Customer vs Admin), fixed time-slot booking with conflict prevention, and automated capacity filtering. Seeded database with default admin credentials.
+      </>
+    ),
+    tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    github: "https://github.com/abhishek4643/Vindela",
+    link: "#",
+  },
+  {
+    title: "DataPure — Intelligent Data Deduplication",
+    tag: "Cloud · Full-Stack",
+    tagColor: "#00FF87",
+    date: "Aug 2025",
+    gradient: "linear-gradient(135deg,#00FF87,#00FF87)",
+    description: (
+      <>
+        Built a full-stack cloud application with a <strong className="text-white font-medium">two-layer validation pipeline</strong> — <strong className="text-white font-medium">SHA-256</strong> exact hashing followed by <strong className="text-white font-medium">RapidFuzz</strong> semantic similarity — to detect and prevent duplicate data before it reaches the database. Features a <strong className="text-white font-medium">React + Vite</strong> frontend with real-time analytics dashboard, live search command palette, and a manual flagged-entry review workflow. Backend powered by <strong className="text-white font-medium">FastAPI</strong> with <strong className="text-white font-medium">Supabase PostgreSQL</strong>. Built for the <strong className="text-white font-medium">CodeAlpha Cloud Computing Internship</strong>.
+      </>
+    ),
+    tech: ["React", "FastAPI", "Supabase", "RapidFuzz", "SHA-256", "Framer Motion"],
+    github: "https://github.com/abhishek4643/DataPure",
+    link: "#",
+  },
+  {
+    title: "CloudShield — Cloud Security Platform",
+    tag: "Cloud · Security",
+    tagColor: "#00FF87",
+    date: "2025",
+    gradient: "linear-gradient(135deg,#00FF87,#00FF87)",
+    description: (
+      <>
+        Developed a <strong className="text-white font-medium">cloud security monitoring</strong> platform focused on protecting cloud infrastructure from threats and vulnerabilities. Built with a structured <strong className="text-white font-medium">code architecture</strong> and integrated <strong className="text-white font-medium">database layer</strong> for persistent threat logging. Designed to detect, alert, and respond to security incidents across <strong className="text-white font-medium">cloud environments</strong> with automated scanning and compliance checks.
+      </>
+    ),
+    tech: ["Python", "Cloud Security", "Database", "Threat Detection"],
+    github: "https://github.com/abhishek4643/CloudShield",
+    link: "#",
+  },
+  {
+    title: "Notes — Mobile Notes App",
+    tag: "Mobile · React Native",
+    tagColor: "#00FF87",
+    date: "2025",
+    gradient: "linear-gradient(135deg,#00FF87,#00FF87)",
+    description: (
+      <>
+        Built a cross-platform <strong className="text-white font-medium">mobile notes application</strong> using <strong className="text-white font-medium">React Native</strong> and <strong className="text-white font-medium">Expo</strong> with TypeScript. Features a clean, minimal UI for creating, editing, and organizing personal notes. Configured with <strong className="text-white font-medium">EAS Build</strong> for streamlined deployment to iOS and Android. Implements local state management and a responsive layout optimized for mobile devices.
+      </>
+    ),
+    tech: ["React Native", "Expo", "TypeScript", "EAS Build"],
+    github: "https://github.com/abhishek4643/Notes",
     link: "#",
   },
 ];
@@ -68,56 +143,60 @@ export default function Projects() {
           <div className="w-20 h-1 rounded-full mx-auto" style={{ background: "linear-gradient(90deg,#00FF87,#00FF87)" }} />
         </motion.div>
 
-        {/* Stack */}
-        <div className="space-y-8">
+        {/* 2-Column Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, idx) => (
             <motion.div key={idx} variants={fadeUp}>
               <TiltCard className="h-full">
-                <article className="group relative rounded-2xl p-8 overflow-hidden transition-all duration-500 flex flex-col h-full">
+                <article className="group relative rounded-2xl p-6 md:p-8 overflow-hidden transition-all duration-500 flex flex-col h-full">
                   
                   <div className="flex flex-col h-full relative z-10">
-                    {/* Top Row: Tag & Links */}
-                    <div className="flex items-center justify-between mb-8 border-b border-white/[0.05] pb-5">
-                      <span
-                        className="text-[13px] px-3 py-1.5 rounded-md font-medium border"
-                        style={{
-                          color: project.tagColor,
-                          backgroundColor: `${project.tagColor}22`,
-                          borderColor: `${project.tagColor}33`,
-                        }}
-                      >
-                        {project.tag}
-                      </span>
-                      <div className="flex gap-4">
-                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-[#00FF87] transition-colors">
-                          <GitHubIcon size={18} />
+                    {/* Top Row: Tag, Date & Links */}
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="flex items-center gap-3">
+                        <span
+                          className="text-[11px] px-2.5 py-1 rounded-md font-semibold border uppercase tracking-wider"
+                          style={{
+                            color: project.tagColor,
+                            backgroundColor: `${project.tagColor}15`,
+                            borderColor: `${project.tagColor}30`,
+                          }}
+                        >
+                          {project.tag}
+                        </span>
+                        <span className="text-[11px] font-bold text-white/25 uppercase tracking-widest">
+                          {project.date}
+                        </span>
+                      </div>
+                      <div className="flex gap-3">
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-white/25 hover:text-[#00FF87] transition-colors">
+                          <GitHubIcon size={16} />
                         </a>
-                        <a href={project.link} className="text-white/30 hover:text-[#00FF87] transition-colors">
-                          <ExternalLink size={18} />
-                        </a>
+                        {project.link !== "#" && (
+                          <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-white/25 hover:text-[#00FF87] transition-colors">
+                            <ExternalLink size={16} />
+                          </a>
+                        )}
                       </div>
                     </div>
 
-                    {/* Content */}
-                    <h3 className="text-2xl md:text-3xl font-black text-white mb-4 tracking-tight uppercase group-hover:text-white transition-colors">
+                    {/* Title */}
+                    <h3 className="text-lg md:text-xl font-bold text-white mb-3 tracking-tight group-hover:text-[#00FF87] transition-colors duration-300">
                       {project.title}
                     </h3>
-                    <p className="text-white/40 mb-8 leading-relaxed max-w-4xl text-sm font-medium">
+
+                    {/* Description */}
+                    <p className="text-white/60 mb-6 leading-relaxed text-sm md:text-base">
                       {project.description}
                     </p>
 
-                    {/* Bottom Row: Tech Stack & Date */}
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mt-auto">
-                      <div className="flex flex-wrap gap-2">
-                        {project.tech.map((t) => (
-                          <span key={t} className="px-3 py-1 rounded-lg text-xs font-semibold bg-white/5 border border-white/10 text-white/50">
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="text-xs font-bold text-white/30 uppercase tracking-widest shrink-0">
-                        {project.date}
-                      </div>
+                    {/* Tech Stack */}
+                    <div className="flex flex-wrap gap-1.5 mt-auto">
+                      {project.tech.map((t) => (
+                        <span key={t} className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-white/[0.04] border border-white/[0.08] text-white/40">
+                          {t}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </article>

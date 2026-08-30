@@ -178,23 +178,7 @@ export default function Achievements() {
           ))}
         </div>
 
-        {/* Education Section */}
-        <motion.div variants={fadeUp} className="mt-20 text-center">
-          <p className="label-mono mb-3">Education</p>
-          <h3 className="section-heading text-[1.8rem] md:text-[2.4rem] text-transparent bg-clip-text bg-gradient-to-r from-[#00FF87] to-[#00FF87] inline-block mb-8">Academic Journey</h3>
-          <div className="p-8 rounded-2xl">
-            <div className="flex flex-col items-center text-center gap-4">
-              <div>
-                <h4 className="text-xl font-semibold mb-2 text-white" style={{ fontFamily: 'var(--font-heading)' }}>B.Tech in Computer Science and Engineering</h4>
-                <p className="text-[#00FF87] mb-2 font-medium label-mono" style={{ letterSpacing: '0.08em' }}>Guru Nanak Institutions Technical Campus</p>
-                <p className="text-white/45 text-[13px] mt-1">Hyderabad, India</p>
-              </div>
-              <div>
-                <p className="text-white/50 font-medium text-sm">Expected July 2026</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+
       </motion.div>
 
       {selectedImage && (

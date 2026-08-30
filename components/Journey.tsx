@@ -4,22 +4,12 @@ import { fadeUp, slideLeft, slideRight, stagger } from "@/lib/animations";
 
 const timeline = [
   {
-    type: "work",
-    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00FF87" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>,
-    title: "Team Leader",
-    org: "Hackathons & Projects",
-    period: "2024 – Present",
-    description:
-      "Managing project strategy, development coordination, and presentations. Focused on shipping working solutions that solve real user problems.",
-    color: "#00FF87",
-  },
-  {
     type: "education",
     icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00FF87" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>,
     title: "B.Tech — Computer Science & Engineering",
     org: "Guru Nanak Institutions Technical Campus, Hyderabad",
-    period: "Expected Aug 2026",
-    description: "CGPA: 7.58 · Core coursework in Data Structures, Algorithms, ML, AI, Cloud Computing, OS, DBMS, and Computer Networks.",
+    period: "Sep 2026",
+    description: "CGPA: 7.9 · Core coursework in Data Structures, Algorithms, ML, AI, Cloud Computing, OS, DBMS, and Computer Networks.",
     color: "#00FF87",
   },
   {
@@ -93,7 +83,7 @@ export default function Journey() {
                     <p className="text-xs font-medium mb-3" style={{ color: item.color }}>
                       {item.org}
                     </p>
-                    <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
+                    <p className="text-sm md:text-base leading-relaxed text-white/60">
                       {item.description}
                     </p>
                   </motion.div>

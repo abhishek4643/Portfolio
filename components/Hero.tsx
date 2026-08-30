@@ -37,8 +37,8 @@ export default function Hero() {
             <TypewriterEffect />
           </motion.div>
           {/* Bio */}
-          <motion.p variants={fadeUp} className="text-sm md:text-base text-white/45 max-w-xl mx-auto mb-10 leading-relaxed">
-            Final-year Computer Science student specializing in AI and computer vision, with hands-on experience building production-ready applications using PyTorch, OpenCV, and Flask. Demonstrated ability to lead teams at national-level hackathons and deploy scalable, user-facing AI systems.
+          <motion.p variants={fadeUp} className="text-sm md:text-base text-white/60 max-w-xl mx-auto mb-10 leading-relaxed">
+            <strong className="text-white font-medium">Software Engineer</strong> specializing in <strong className="text-white font-medium">AI, Computer Vision, and React development</strong>. Passionate about building intelligent applications with <strong className="text-white font-medium">PyTorch, OpenCV, and Flask</strong> for robust backend AI systems, paired with <strong className="text-white font-medium">React</strong> for dynamic, user-facing web interfaces.
           </motion.p>
 
 

@@ -7,27 +7,27 @@ import { TiltCard } from "./TiltCard";
 const skillCategories = [
   {
     title: "AI & Machine Learning",
-    skills: ["PyTorch", "TensorFlow", "YOLO", "Ultralytics", "CNN", "NLP", "Deep Learning"],
+    skills: ["PyTorch", "TensorFlow", "Scikit-Learn", "LLMs", "NLP", "Deep Learning", "RapidFuzz"],
   },
   {
     title: "Computer Vision",
-    skills: ["OpenCV", "Image Classification", "Object Detection", "Real-Time Analysis", "Medical Imaging"],
+    skills: ["OpenCV", "YOLOv9", "Image Classification", "Object Detection", "Medical Imaging", "Roboflow"],
   },
   {
-    title: "Web & Deployment",
-    skills: ["Flask", "Streamlit", "REST APIs", "HTML/CSS", "Streamlit Cloud"],
+    title: "Full-Stack Web",
+    skills: ["React", "Node.js", "Express", "FastAPI", "Spring Boot", "Tailwind CSS", "Framer Motion"],
   },
   {
-    title: "Cybersecurity",
-    skills: ["Nmap", "Network Reconnaissance", "Vulnerability Scanning", "Bash Scripting"],
+    title: "Databases & Cache",
+    skills: ["PostgreSQL", "MongoDB", "Supabase", "Redis", "Vector Databases", "DBMS"],
   },
   {
-    title: "Tools & Platforms",
-    skills: ["Git / GitHub", "Google Colab", "VS Code", "Roboflow", "Tableau"],
+    title: "Cloud & DevOps",
+    skills: ["Docker", "Vercel", "Render", "Streamlit Cloud", "Git / GitHub", "REST APIs"],
   },
   {
-    title: "Core CS Concepts",
-    skills: ["Data Structures", "Algorithms", "OOP", "DBMS"],
+    title: "Cybersecurity & Core",
+    skills: ["Nmap", "JWT", "SHA-256", "Bash Scripting", "Python", "Java", "Data Structures"],
   },
 ];
 
