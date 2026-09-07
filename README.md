@@ -1,12 +1,12 @@
 <div align="center">
 
-# 🚀 Portfolio
+# Portfolio
 
 ### **A Modern, High-Performance Personal Portfolio**
 
 _Crafted with TypeScript · Powered by Next.js · Deployed on Vercel_
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-0A66C2?style=for-the-badge)](https://portfolio-ecru-five-i092te8cy9.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-0A66C2?style=for-the-badge)](https://portfolio-ecru-five-i092te8cy9.vercel.app)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
@@ -15,7 +15,7 @@ _Crafted with TypeScript · Powered by Next.js · Deployed on Vercel_
 
 ---
 
-## 📌 About
+## About
 
 A sleek, responsive portfolio website designed to showcase professional experience, technical skills, and personal projects. Built with a focus on **performance**, **accessibility**, and **modern design principles**.
 
@@ -23,20 +23,20 @@ A sleek, responsive portfolio website designed to showcase professional experien
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 | Feature | Description |
 |---------|-------------|
-| ⚡ **Blazing Fast** | Server-side rendering with Next.js for instant page loads |
-| 📱 **Fully Responsive** | Pixel-perfect on desktop, tablet, and mobile devices |
-| 🎨 **Modern UI/UX** | Clean design with smooth animations and transitions |
-| 🔍 **SEO Optimized** | Meta tags, structured data, and semantic HTML |
-| 🌙 **Dark Mode** | Toggle between light and dark themes seamlessly |
-| ♿ **Accessible** | WCAG-compliant with keyboard navigation support |
+| **Blazing Fast** | Server-side rendering with Next.js for instant page loads |
+| **Fully Responsive** | Pixel-perfect on desktop, tablet, and mobile devices |
+| **Modern UI/UX** | Clean design with smooth animations and transitions |
+| **SEO Optimized** | Meta tags, structured data, and semantic HTML |
+| **Dark Mode** | Toggle between light and dark themes seamlessly |
+| **Accessible** | WCAG-compliant with keyboard navigation support |
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ```
 Frontend:      TypeScript · React · Next.js
@@ -47,7 +47,7 @@ Version Ctrl:  Git & GitHub
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Node.js** ≥ 18.x
@@ -80,7 +80,7 @@ npm start
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Portfolio/
@@ -97,7 +97,7 @@ Portfolio/
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 This project is configured for **zero-config deployment** on Vercel:
 
@@ -107,7 +107,7 @@ This project is configured for **zero-config deployment** on Vercel:
 
 ---
 
-## 📬 Contact
+## Contact
 
 **Abhishek Perumalla**
 
@@ -117,6 +117,6 @@ This project is configured for **zero-config deployment** on Vercel:
 
 <div align="center">
 
-_Built with ❤️ and TypeScript_
+_Built with TypeScript_
 
 </div>
