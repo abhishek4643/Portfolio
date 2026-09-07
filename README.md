@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# 🚀 Portfolio
 
-First, run the development server:
+### **A Modern, High-Performance Personal Portfolio**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+_Crafted with TypeScript · Powered by Next.js · Deployed on Vercel_
+
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-0A66C2?style=for-the-badge)](https://portfolio-ecru-five-i092te8cy9.vercel.app)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+
+</div>
+
+---
+
+## 📌 About
+
+A sleek, responsive portfolio website designed to showcase professional experience, technical skills, and personal projects. Built with a focus on **performance**, **accessibility**, and **modern design principles**.
+
+> _"Your portfolio is your handshake before you walk into the room."_
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+|---------|-------------|
+| ⚡ **Blazing Fast** | Server-side rendering with Next.js for instant page loads |
+| 📱 **Fully Responsive** | Pixel-perfect on desktop, tablet, and mobile devices |
+| 🎨 **Modern UI/UX** | Clean design with smooth animations and transitions |
+| 🔍 **SEO Optimized** | Meta tags, structured data, and semantic HTML |
+| 🌙 **Dark Mode** | Toggle between light and dark themes seamlessly |
+| ♿ **Accessible** | WCAG-compliant with keyboard navigation support |
+
+---
+
+## 🛠️ Tech Stack
+
+```
+Frontend:      TypeScript · React · Next.js
+Styling:       CSS Modules / Tailwind CSS
+Deployment:    Vercel (CI/CD)
+Version Ctrl:  Git & GitHub
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+- **Node.js** ≥ 18.x
+- **npm** or **yarn**
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Clone the repository
+git clone https://github.com/abhishek4643/Portfolio.git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Navigate to the project directory
+cd Portfolio
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Install dependencies
+npm install
 
-## Deploy on Vercel
+# Start development server
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 📁 Project Structure
+
+```
+Portfolio/
+├── public/              # Static assets (images, icons, fonts)
+├── src/
+│   ├── app/             # Next.js App Router pages
+│   ├── components/      # Reusable UI components
+│   ├── styles/          # Global and module CSS
+│   └── utils/           # Helper functions & constants
+├── next.config.js       # Next.js configuration
+├── tsconfig.json        # TypeScript configuration
+└── package.json         # Dependencies & scripts
+```
+
+---
+
+## 🌐 Deployment
+
+This project is configured for **zero-config deployment** on Vercel:
+
+1. Push to `main` branch
+2. Vercel automatically builds and deploys
+3. Preview deployments for every pull request
+
+---
+
+## 📬 Contact
+
+**Abhishek Perumalla**
+
+[![GitHub](https://img.shields.io/badge/GitHub-abhishek4643-181717?style=flat-square&logo=github)](https://github.com/abhishek4643)
+
+---
+
+<div align="center">
+
+_Built with ❤️ and TypeScript_
+
+</div>
