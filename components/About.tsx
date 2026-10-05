@@ -40,8 +40,8 @@ export default function About() {
                 <p>Technical Campus</p>
                 <p>Bachelor of Technology in</p>
                 <p>Computer Science and Engineering</p>
-                <p className="text-[#00FF87] mt-1 font-semibold">GPA: 7.9</p>
-                <p>Expected: Sep 2026</p>
+                <p className="text-[#00FF87] mt-1 font-semibold">CGPA: 7.72</p>
+                <p>Sep 2026</p>
               </div>
             </div>
           </motion.div>

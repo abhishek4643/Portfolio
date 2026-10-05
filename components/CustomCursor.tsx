@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useCallback, useRef } from "react";
-import { motion, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 type CursorState = "default" | "hover" | "active";
 
@@ -15,27 +15,53 @@ export default function CustomCursor() {
   const followX = useSpring(mouseX, { damping: 26, stiffness: 300, mass: 0.7 });
   const followY = useSpring(mouseY, { damping: 26, stiffness: 300, mass: 0.7 });
 
+  const getTargetState = useCallback((target: EventTarget | null): CursorState => {
+    if (!target) return "default";
+    const el = (target instanceof Element ? target : (target as Node)?.parentElement) as HTMLElement | null;
+    if (!el) return "default";
+
+    // 1. Clickable elements (links, buttons, inputs, interactive cards)
+    const isClickable = Boolean(
+      el.closest("a, button, .tilt-card, [role='button'], input, textarea, select, label")
+    );
+    if (isClickable) return "hover";
+
+    // 2. Text elements & sentences (paragraphs, headings, spans, list items, quotes, badges)
+    const isTextTag = Boolean(
+      el.closest("p, h1, h2, h3, h4, h5, h6, span, strong, b, em, i, li, blockquote, code, pre, time")
+    );
+    const hasTextContent = Boolean(el.textContent && el.textContent.trim().length > 0);
+    const isNotMedia = !el.closest("svg, img, video, canvas");
+
+    if (isTextTag && hasTextContent && isNotMedia) {
+      return "hover";
+    }
+
+    return "default";
+  }, []);
+
   const handleMouseMove = useCallback((e: MouseEvent) => {
-    const { clientX, clientY } = e;
+    const { clientX, clientY, target } = e;
     mouseX.set(clientX);
     mouseY.set(clientY);
 
     lastPos.current = { x: clientX, y: clientY };
 
     if (!isVisible) setIsVisible(true);
-  }, [mouseX, mouseY, isVisible]);
+
+    const nextState = getTargetState(target);
+    setCursorState((prev) => (prev === "active" ? "active" : nextState));
+  }, [mouseX, mouseY, isVisible, getTargetState]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
     const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const isClickable = target.closest("a, button, .tilt-card, [role='button'], input, textarea, select, label");
-      setCursorState(isClickable ? "hover" : "default");
+      setCursorState((prev) => (prev === "active" ? "active" : getTargetState(e.target)));
     };
 
     const handleMouseDown = () => setCursorState("active");
-    const handleMouseUp = () => setCursorState("default");
+    const handleMouseUp = (e: MouseEvent) => setCursorState(getTargetState(e.target));
 
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseover", handleMouseOver);
@@ -50,7 +76,7 @@ export default function CustomCursor() {
       window.removeEventListener("mousedown", handleMouseDown);
       window.removeEventListener("mouseup", handleMouseUp);
     };
-  }, [handleMouseMove]);
+  }, [handleMouseMove, getTargetState]);
 
   if (!isVisible) return null;
 

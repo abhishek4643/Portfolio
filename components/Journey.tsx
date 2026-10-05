@@ -9,7 +9,7 @@ const timeline = [
     title: "B.Tech — Computer Science & Engineering",
     org: "Guru Nanak Institutions Technical Campus, Hyderabad",
     period: "Sep 2026",
-    description: "CGPA: 7.9 · Core coursework in Data Structures, Algorithms, ML, AI, Cloud Computing, OS, DBMS, and Computer Networks.",
+    description: "CGPA: 7.72 · Core coursework in Data Structures, Algorithms, ML, AI, Cloud Computing, OS, DBMS, and Computer Networks.",
     color: "#00FF87",
   },
   {
