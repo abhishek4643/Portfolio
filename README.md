@@ -2,7 +2,7 @@
 
 A high-performance personal portfolio and engineering showcase designed to present professional experience, architectural depth, and modern full-stack web applications with sub-second page loads and fluid interactive motion.
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live_Site-0A66C2?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-abhishek4643s-projects.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Demo-Live_Site-0A66C2?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-three-omega-ahkmg9l6l4.vercel.app)
 [![Next.js](https://img.shields.io/badge/Next.js-16.2-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -22,7 +22,7 @@ Portfolio serves as the central digital hub for technical competencies, featured
 ## Live Deployment
 
 Experience the live portfolio in production:
-- **Live Application:** [https://portfolio-abhishek4643s-projects.vercel.app](https://portfolio-abhishek4643s-projects.vercel.app)
+- **Live Application:** [https://portfolio-three-omega-ahkmg9l6l4.vercel.app](https://portfolio-three-omega-ahkmg9l6l4.vercel.app)
 - **Deployment Status:** Active and Continuously Deployed via Vercel CI/CD
 - **Target Audience:** Technical Recruiters, Engineering Managers, and Collaborators
 
